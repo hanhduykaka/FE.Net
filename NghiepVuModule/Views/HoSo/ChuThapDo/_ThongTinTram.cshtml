@@ -1,0 +1,149 @@
+﻿ <div class="col-md-12">
+    <div class="container-fluid mt-10">
+        <div class="sytClearFix dnnClear"></div>
+        <div class="strike">
+            <span>THÔNG TIN TRẠM, ĐIỂM SƠ CẤP CỨU</span>
+        </div>
+    </div>
+</div>
+
+<div class="sytClearFix dnnClear"></div>
+<div class="col-md-12">
+    <div class="container-fluid">
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2  text-right syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Tên trạm, điểm sơ cấp cứu </span>
+            </div>
+            <div class="col-md-2 nopadding">
+                <div class="">
+                    <input class="width-100 syt-radius-3 min-h-30 paddingMin"
+                           name="CanCuThamDinh" type="text" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sytClearFix dnnClear"></div>
+<div class="col-md-12">
+    <div class="container-fluid">
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Địa chỉ</span>
+            </div>
+            @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/Shared/HoSo/ThongTinDiaChi/_ThongTinDiaChi1_Row.cshtml")
+            @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/Shared/HoSo/ThongTinDiaChi/_SoNhaDuong1_Row.cshtml")
+        </div>
+    </div>
+</div>
+
+@Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/Shared/HoSo/ThongTinNguoi/_DienThoaiEmail_Row.cshtml")
+<div class="sytClearFix dnnClear"></div>
+<div class="col-md-12">
+    <div class="container-fluid">
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2  text-right syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Người chịu trách nhiệm chuyên môn </span>
+            </div>
+            <div class="col-md-2 nopadding">
+                <div class="">
+                    <input class="width-100 syt-radius-3 min-h-30 paddingMin"
+                           name="NguoiChiuTrachNhiemChuyenMon" type="text" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="sytClearFix dnnClear"></div>
+<div class="col-md-12">
+    <div class="container-fluid">
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2  text-right syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Số QĐ thành lập </span>
+            </div>
+            <div class="col-md-2 nopadding">
+                <div class="">
+                    <input class="width-100 syt-radius-3 min-h-30 paddingMin"
+                           name="SoQDThanhLap" type="text" />
+                </div>
+            </div>
+            <div class="col-md-2  text-right syt-label">
+                <span class="sknadTitle-gray-normal font-size-13">Ngày cấp </span>
+            </div>
+            <div class="col-md-2 nopadding">
+                <div class="">
+                    <input class="width-100 syt-radius-3 min-h-30 paddingMin"
+                           name="NgayCapSoQDThanhLap" type="text" />
+                </div>
+            </div>
+            <div class="col-md-2  text-right syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Nơi cấp </span>
+            </div>
+            <div class="col-md-2 nopadding">
+                <div class="">
+                    <input class="width-100 syt-radius-3 min-h-30 paddingMin"
+                           name="NoiCapSoQDThanhLap" type="text" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="sytClearFix dnnClear"></div>
+<div class="col-md-12">
+    <div class="container-fluid">
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2  text-right syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Hình thức tổ chức </span>
+            </div>
+            <div class="col-md-2 nopadding">
+                <div class="">
+                    <input type="radio" name="HinhThucToChuc" checked="checked"/>
+                    <span class="mr-5">Trạm </span>
+                    <input type="radio" name="HinhThucToChuc"/>
+                    <span class="mr-5">Điểm sơ cấp cứu</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="sytClearFix dnnClear"></div>
+<div class="col-md-12">
+    <div class="container-fluid">
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2  text-right syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Phạm vi hoạt động chuyên môn </span>
+            </div>
+            <div class="col-md-8 nopadding">
+                <div class="">
+                    <input class="width-100 syt-radius-3 min-h-30 paddingMin"
+                           name="PhamViHoatDongChuyenMon" type="text" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="sytClearFix dnnClear"></div>
+<div class="col-md-12">
+    <div class="container-fluid">
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2  text-right syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Thời gian làm việc hằng ngày </span>
+            </div>
+            <div class="col-md-2 nopadding">
+                <div class="">
+                    <input class="width-100 syt-radius-3 min-h-30 paddingMin"
+                           name="ThoiGianLamViec" type="text" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

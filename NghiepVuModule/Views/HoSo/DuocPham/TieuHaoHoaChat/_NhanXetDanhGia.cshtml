@@ -1,0 +1,111 @@
+﻿
+ <div class="col-md-12">
+    <div class="container-fluid mt-10">
+        <div class="sytClearFix dnnClear"></div>
+        <div class="strike">
+            <span>NHẬN XÉT ĐÁNH GIÁ</span>
+        </div>
+    </div>
+</div>
+<div class="sytClearFix dnnClear"></div>
+<div class="div-select-parent-area">
+    <div class="sytClearFix dnnClear"></div>
+    <div class="col-md-12">
+        <div class="container-fluid">
+            <div class="row mt-10 pr-15">
+                <div class="col-md-2"></div>
+                <div class="col-md-9 nopadding">
+                    <textarea rows="7"  class="width-100 syt-radius-3 area-show box-sizing padding-all-10 line-height-25"></textarea>
+                </div>
+                <div class="col-md-1">
+                    <div class="syt_ellipsis text-center max-w-30 cursor-pointer chon-goi-y" >
+                        <i class="fa fa-ellipsis-h line-height-25" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content div-select-parent">
+                <div class="modal-header text-left">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h5 class="modal-title">
+                        <u class="syt-label font-weight-italic font-weight-400">Gợi ý nhập liệu</u>
+                    </h5>
+                    <div class="dnnClear clearfix"></div>
+                    <div class="col-md-12 mt-10">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="col-md-8 nopadding">
+                                    <input type="text" class="width-100 min-h-30 syt-radius-3" placeholder="Nhập nội dung cần tìm" />
+                                </div>
+                                <div class="col-md-2 paddingMin">
+                                    <input class="cursor-pointer sytButton sknadTitle-white width-100" type="button" value="Tìm">
+                                </div>
+                                <div class="col-md-2 paddingMin">
+                                    <input class="cursor-pointer sytButton sknadTitle-white width-100 input-select" type="button" value="Chọn">
+                                </div>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body  div_edit_table_parent">
+                    <table width="100%" class="table table-striped table-data tbl-dynamic"
+                           id="tbl_danh_sach_goi_y" data-html="html_gen_edit_danh_sach_goi_y">
+                        <thead>
+                            <tr class="font-size-13">
+                                <th class="text text-left bgth">
+                                    <input id="" type="checkbox" value="checkbox" class="chk-tbl-all">
+                                </th>
+                                <th class="text text-left bgth"> STT</th>
+                                <th class="text text-left bgth">Nội dung</th>
+                                <th class="text text-left bgth">Sửa</th>
+                                <th class="text text-left bgth">Xóa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="font-size-13">
+                                <td>
+                                    <input id="" type="checkbox" value="checkbox">
+                                </td>
+                                <td> 1 </td>
+                                <td class="td-noi-dung">
+                                    Quá trình thực hiện khám chữa bệnh phải tuân thủ các quy định của luật
+                                </td>
+                                <td class="syt-edit-btn cursor-pointer" data-id="1"
+                                    data-noi-dung="Quá trình thực hiện khám chữa bệnh phải tuân thủ các quy định của luật">
+                                    <span class="syt-delete-btn cursor-pointer"></span>
+                                </td>
+                                <td class="syt-delete-btn cursor-pointer" title="Xóa" onclick="fn_Xoa_Cong_Tac(this)"></td>
+                            </tr>
+                            <tr class="font-size-13">
+                                <td>
+                                    <input id="" type="checkbox" value="checkbox">
+                                </td>
+                                <td> 2 </td>
+                                <td class="td-noi-dung">
+                                    Quá trình thực hiện khám chữa bệnh phải tuân thủ các quy định của luật 2
+                                </td>
+                                <td class="syt-edit-btn cursor-pointer" data-id="1"
+                                    data-noi-dung="Quá trình thực hiện khám chữa bệnh phải tuân thủ các quy định của luật 2">
+                                    <span class="syt-delete-btn cursor-pointer"></span>
+                                </td>
+                                <td class="syt-delete-btn cursor-pointer" title="Xóa" onclick="fn_Xoa_Cong_Tac(this)"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="sytClearFix dnnClear"></div>
+                    <div class="col-md-12 text-right  syt-label">
+                        <a class="cursor-pointer btn_them_edit_table">Thêm mới</a>
+                    </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+</div>

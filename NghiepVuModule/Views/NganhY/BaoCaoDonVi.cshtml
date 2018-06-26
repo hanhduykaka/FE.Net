@@ -1,0 +1,306 @@
+﻿
+
+@{
+    Layout = "~/DesktopModules/MVC/SoYTe.GUI/TrangChuModule/Views/Shared/_Layout.cshtml";
+}
+
+<div class="syt-content mt-85">
+    <div class="container nopadding">
+        <div class="syt-content-div-title paddingMin">
+            <p>
+                <span class="ml-5 sknadTitle-white font-size-16">
+                    Ngành y &nbsp; &nbsp;
+                    <span class="glyphicon glyphicon-triangle-right font-size-9"></span>
+                    &nbsp; &nbsp;
+                    Báo cáo của các đơn vị trực thuộc
+                </span>
+            </p>
+        </div>
+
+        <div class="syt-content-div-box-search">
+            <div class="sytClearFix-19 dnnClear "></div>
+            <div class="sytClearFix-min dnnClear "></div>
+            <div class="col-md-12 mt-10">
+                <div class="row">
+                    <div class="col-md-2  text-right  syt-label">
+                        <span class="sknadTitle-gray-normal font-size-13 line-height-1_8-Em"> Ngành </span>
+                    </div>
+                    <div class="col-md-2 nopadding">
+                        <input type="radio" name="bao_cao_nganh" checked="checked" />
+                        <span class="mr-5">Y </span>
+                        <input type="radio" name="bao_cao_nganh" />
+                        <span class="mr-5">Dược</span>
+                    </div>
+                    <div class="col-md-2  text-right  syt-label">
+                        <span class="sknadTitle-gray-normal font-size-13"> Ngành </span>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="sknadSelect width-100 adselect">
+                            <option class="sknadTitle-gray-normal font-size-13"> --//-- </option>
+                            <option class="sknadTitle-gray-normal font-size-13"> Trạm  </option>
+                            <option class="sknadTitle-gray-normal font-size-13"> Điểm sơ cấp cứu  </option>
+                        </select>
+                    </div>
+                    <div class="col-md-1  text-right  syt-label">
+                        <span class="sknadTitle-gray-normal font-size-13"> Năm </span>
+                    </div>
+                    <div class="col-md-1 nopadding">
+                        <select class="sknadSelect width-100 adselect slNam"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mt-10">
+                <div class="row">
+                    <div class="col-md-2  text-right  syt-label">
+                        <span class="sknadTitle-gray-normal font-size-13 line-height-1_8-Em"> Theo văn bản số </span>
+                    </div>
+                    <div class="col-md-2 nopadding">
+                        <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" />
+                    </div>
+                    <div class="col-md-2  text-right  syt-label">
+                        <span class="sknadTitle-gray-normal font-size-13"> Tên đơn vị, cơ sở </span>
+                    </div>
+                    <div class="col-md-4">
+                        <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="syt-content-div-icon-search">
+            <div class="sytClearFix-19 dnnClear "></div>
+            <div class="col-md-12">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <div class="row text-right">
+                        <div class="col-md-3 paddingMin"> </div>
+                        <div class="col-md-2 paddingMin">
+                            <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                   type="button" value="Tìm kiếm" />
+                        </div>
+                        <div class="col-md-3 paddingMin paddingTop-12">
+                            <a href="@Url.Action("NhapDauKyBaoCao", "NganhY", new {id = 1})"
+                               class="syt-a-button syt-button-blue sytButton  sknadTitle-white width-100 ">
+                                Nhập báo cáo
+                            </a>
+                        </div>
+                        <div class="col-md-3 paddingMin">
+                            <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                   value="Xuất danh sách" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sytClearFix-min dnnClear "></div>
+        <div class="container-fluid">
+            <div class="font-weight-700 mt-10">
+
+                <div class="col-md-6 paddingLeft-50 paddingLR-30-mobile">
+                    Loại báo cáo
+                </div>
+                <div class="col-md-2">
+                    Theo văn bản số
+                </div>
+                <div class="col-md-2">
+                    Ngày văn bản
+                </div>
+                <div class="col-md-2">
+                    Nơi phát hành
+                </div>
+            </div>
+            <div class="sytClearFix-min dnnClear "></div>
+
+            <div class="col-md-12 text-center mt-5">
+                <div class="container-fluid strike-col11"></div>
+            </div>
+            <div class="sytClearFix-min dnnClear "></div>
+            <div class="panel-heading nopadding">
+                <div class="font-weight-400">
+                    <div class="col-md-6  paddingLeft-50-pc paddingLR-30-mobile">
+                        <span class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"></span>
+                        Báo cáo lĩnh vực khám chữ bệnh và phục hồi chức năng
+                    </div>
+                    <div class="col-md-2">
+                        1620/SYT-NVD
+                    </div>
+                    <div class="col-md-2">
+                        1620/SYT-NVD
+                    </div>
+                    <div class="col-md-2">
+                        1620/SYT-NVD
+                    </div>
+                </div>
+            </div>
+            <div class="sytClearFix-min dnnClear "></div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="container-fluid  paddingLeft-50-pc paddingLR-30-mobile">
+                    <div class="sytClearFix-min dnnClear "></div>
+                    <div class="mt-10 "></div>
+                    <table width="100%" class="table table-striped table-data" id="">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-left bgth font-size-13">Tên đơn vị, cơ sở</th>
+                                <th class="text text-left bgth font-size-13"> Tập tin báo cáo </th>
+                                <th class="text text-left bgth font-size-13">Ghi chú</th>
+                                <th class="text text-left bgth font-size-13">Ngày gửi</th>
+                                <th class="text text-left bgth  font-size-13 ">Người gửi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyUser">
+                            <tr id="00001/HCM-CCHN" class="font-size-13 font-weight-400" name="000077/HCM-CCHN">
+                                <td class="text text-center">
+                                    1
+                                </td>
+                                <td>
+                                    04211
+                                </td>
+                                <td>
+                                    <a href="/images/myw3schoolsimage.jpg" download>
+                                        <i class="material-icons bluecolor cursor-pointer">
+                                            attachment
+                                        </i>
+                                    </a>
+                                </td>
+                                <td>05/10/2017</td>
+                                <td>Khám </td>
+                                <td>Khám chữa bệnh</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="sytClearFix-min dnnClear "></div>
+            <div class="panel-heading nopadding">
+                <div class="font-weight-400">
+                    <div class="col-md-6  paddingLeft-50-pc paddingLR-30-mobile">
+                        <span class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"></span>
+                        Báo cáo lĩnh vực y dược cổ truyền
+                    </div>
+                    <div class="col-md-2">
+                        1620/SYT-NVD
+                    </div>
+                    <div class="col-md-2">
+                        1620/SYT-NVD
+                    </div>
+                    <div class="col-md-2">
+                        1620/SYT-NVD
+                    </div>
+                </div>
+            </div>
+            <div class="sytClearFix-min dnnClear "></div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="container-fluid  paddingLeft-50-pc paddingLR-30-mobile">
+                    <div class="sytClearFix-min dnnClear "></div>
+                    <div class="mt-10 "></div>
+                    <table width="100%" class="table table-striped table-data" id="">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-left bgth font-size-13">Tên đơn vị, cơ sở</th>
+                                <th class="text text-left bgth font-size-13"> Tập tin báo cáo </th>
+                                <th class="text text-left bgth font-size-13">Ghi chú</th>
+                                <th class="text text-left bgth font-size-13">Ngày gửi</th>
+                                <th class="text text-left bgth  font-size-13 ">Người gửi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyUser">
+                            <tr id="00001/HCM-CCHN" class="font-size-13 font-weight-400" name="000077/HCM-CCHN">
+                                <td class="text text-center">
+                                    1
+                                </td>
+                                <td>
+                                    04211
+                                </td>
+                                <td>
+                                    <a href="/images/myw3schoolsimage.jpg" download>
+                                        <i class="material-icons bluecolor cursor-pointer">
+                                            attachment
+                                        </i>
+                                    </a>
+                                </td>
+                                <td>05/10/2017</td>
+                                <td>Khám </td>
+                                <td>Khám chữa bệnh</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="sytClearFix-min dnnClear "></div>
+            <div class="sytClearFix-min dnnClear "></div>
+            <div class="panel-heading nopadding">
+                <div class="font-weight-400">
+                    <div class="col-md-6  paddingLeft-50-pc paddingLR-30-mobile">
+                        <span class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"></span>
+                        Báo cáo lĩnh vực y dược cổ truyền
+                    </div>
+                    <div class="col-md-2">
+                        1620/SYT-NVD
+                    </div>
+                    <div class="col-md-2">
+                        1620/SYT-NVD
+                    </div>
+                    <div class="col-md-2">
+                        1620/SYT-NVD
+                    </div>
+                </div>
+            </div>
+            <div class="sytClearFix-min dnnClear "></div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="container-fluid  paddingLeft-50-pc paddingLR-30-mobile">
+                    <div class="sytClearFix-min dnnClear "></div>
+                    <div class="mt-10 "></div>
+
+                    <table width="100%" class="table table-striped table-data" id="">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-left bgth font-size-13">Tên đơn vị, cơ sở</th>
+                                <th class="text text-left bgth font-size-13"> Tập tin báo cáo </th>
+                                <th class="text text-left bgth font-size-13">Ghi chú</th>
+                                <th class="text text-left bgth font-size-13">Ngày gửi</th>
+                                <th class="text text-left bgth  font-size-13 ">Người gửi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyUser">
+                            <tr id="00001/HCM-CCHN" class="font-size-13 font-weight-400" name="000077/HCM-CCHN">
+                                <td class="text text-center">
+                                    1
+                                </td>
+                                <td>
+                                    04211
+                                </td>
+                                <td>
+                                    <a href="/images/myw3schoolsimage.jpg" download>
+                                        <i class="material-icons bluecolor cursor-pointer">
+                                            attachment
+                                        </i>
+                                    </a>
+                                </td>
+                                <td>05/10/2017</td>
+                                <td>Khám </td>
+                                <td>Khám chữa bệnh</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="sytClearFix-min dnnClear "></div>
+
+        </div>
+        <div class="sytClearFix-min dnnClear "></div>
+        <div class="mt10 paddingBottom"></div>
+    </div>
+</div>
+<script>
+    var rvtoken = $("input[name='__RequestVerificationToken']").val();
+    var moduleId = @Dnn.ModuleContext.ModuleId;
+    var tabId = @Dnn.ModuleContext.TabId;
+</script>
+
+<div class="sytClearFix dnnClear"></div>
+
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/NganhY/nganhy.index.danhsachchungchi.min.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/NganhY/nganhy.bc.baocaonganhy.min.js"></script>

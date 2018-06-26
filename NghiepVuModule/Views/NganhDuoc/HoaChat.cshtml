@@ -1,0 +1,149 @@
+﻿
+@{
+    Layout = "~/DesktopModules/MVC/SoYTe.GUI/TrangChuModule/Views/Shared/_Layout.cshtml";
+}
+
+<div class="syt-content mt-85">
+    <div class="container nopadding">
+        <div class="syt-content-div-title paddingMin">
+            <p>
+                <span class="ml-5 sknadTitle-white font-size-16">
+                    Ngành y &nbsp; &nbsp;
+                    <span class="glyphicon glyphicon-triangle-right font-size-9"></span>
+                    &nbsp; &nbsp;
+                    Thẩm định kế hoạch đấu thầu vật tư y tế tiêu hao và hóa chất
+                    <span class="glyphicon glyphicon-triangle-right font-size-9"></span>
+                    &nbsp; &nbsp; Danh sách giấy tiếp nhận
+                </span>
+            </p>
+        </div>
+
+        <div class="syt-content-div-box-search">
+            <div class="sytClearFix-19 dnnClear "></div>
+            <div class="sytClearFix-min dnnClear "></div>
+            <div class="col-md-12 mt-10">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-5  text-center  syt-label  nopadding">
+                            <span class="sknadTitle-gray-normal font-size-13"> Số quyết định </span>
+                        </div>
+                        <div class="col-md-7 nopadding">
+                            <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6  text-right  syt-label">
+                                    <span class="sknadTitle-gray-normal font-size-13"> Ngày quyết định </span>
+                                </div>
+                                <div class="col-md-6 nopadding">
+                                    <input class="width-100 syt-radius-3 min-h-30 paddingMin nopadding" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6  text-right  syt-label">
+                                    <span class="sknadTitle-gray-normal font-size-13"> đến </span>
+                                </div>
+                                <div class="col-md-6 nopadding">
+                                    <input class="width-100 syt-radius-3 min-h-30 paddingMin nopadding" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sytClearFix-min dnnClear "></div>
+            <div class="col-md-12 mt-10">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-5  text-right  syt-label">
+                            <span class="sknadTitle-gray-normal font-size-13"> Đơn vị trình </span>
+                        </div>
+                        <div class="col-md-7 nopadding">
+                            <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-3  text-right  syt-label">
+                            <span class="sknadTitle-gray-normal font-size-13"> Số tờ trình</span>
+                        </div>
+                        <div class="col-md-3 nopadding">
+                            <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="syt-content-div-icon-search">
+            <div class="sytClearFix-19 dnnClear "></div>
+            <div class="col-md-12">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-2 paddingMin">
+                            <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                   type="button" value="Tìm" />
+                        </div>
+                        <div class="col-md-3 paddingMin">
+                            <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                   type="button" value="Nhập đầu kỳ" />
+                        </div>
+                        <div class="col-md-4 paddingMin">
+                            <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                   value="Xuất danh sách" />
+                        </div>
+                        <div class="col-md-3 paddingMin">
+                            <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                   value="Công bố website" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table width="100%" class="table table-striped table-data" id="">
+            <thead>
+                <tr>
+                    <th class="text text-center bgth font-size-13">STT</th>
+                    <th class="text text-center bgth font-size-13">Số quyết định</th>
+                    <th class="text text-center bgth font-size-13"> Ngày quyết định </th>
+                    <th class="text text-center bgth font-size-13">Đơn vị trình</th>
+                    <th class="text text-center bgth font-size-13">Số tờ trình </th>
+                    <th class="text text-left bgth  font-size-13 ">Tiêu đề</th>
+                    <th class="text text-center bgth  font-size-13 ">Chủ đầu tư</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyUser">
+                <tr id="00001/HCM-CCHN" class="font-size-13 font-weight-400" name="000077/HCM-CCHN">
+                    <td class="text text-center">
+                        1
+                    </td>
+                    <td>
+                        04211
+                    </td>
+                    <td>te</td>
+                    <td>05/10/2017</td>
+                    <td>Khám </td>
+                    <td>Khám chữa bệnh</td>
+                    <td>Thái Tài</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    var rvtoken = $("input[name='__RequestVerificationToken']").val();
+    var moduleId = @Dnn.ModuleContext.ModuleId;
+    var tabId = @Dnn.ModuleContext.TabId;
+</script>
+
+<div class="sytClearFix dnnClear"></div>
+
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/NganhY/nganhy.index.danhsachchungchi.min.js"></script>

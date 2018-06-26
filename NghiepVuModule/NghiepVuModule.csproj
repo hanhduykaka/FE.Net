@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{645180A2-EDD5-437C-9D8A-3A2DACF18FEF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NghiepVuModule</RootNamespace>
+    <AssemblyName>NghiepVuModule</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\packages\Aspose\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Word">
+      <HintPath>..\packages\Aspose\Aspose.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\packages\Aspose\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="Business.Entities">
+      <HintPath>..\..\SOYTE.BACKEND\SOYTE_BE\Core\Module.Framework\bin\Debug\Business.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SOYTE.BACKEND\SOYTE_BE\Core\Core.Common\bin\Debug\Core.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke">
+      <HintPath>..\packages\DotNetNuke.Core.9.1.0.367\lib\net40\DotNetNuke.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.Web.Client">
+      <HintPath>..\packages\DotNetNuke.Web.Client.9.1.0.367\lib\net40\DotNetNuke.Web.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.Web.Mvc">
+      <HintPath>..\packages\DotNetNuke.Web.Mvc.9.1.0.367\lib\net45\DotNetNuke.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetNuke.Core.9.1.0.367\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Module.Framework">
+      <HintPath>..\..\SOYTE.BACKEND\SOYTE_BE\Core\Module.Framework\bin\Debug\Module.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\SOYTE.BACKEND\SOYTE_BE\Core\Module.Framework\bin\Debug\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.1\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\MotCuaServiceClient1.cs" />
+    <Compile Include="App_LocalResources\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Settings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\FeatureController.cs" />
+    <Compile Include="Components\ItemManager.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HoiThaoController.cs" />
+    <Compile Include="Controllers\HoSoController.cs" />
+    <Compile Include="Controllers\MotCuaController.cs" />
+    <Compile Include="Controllers\MyPhamController.cs" />
+    <Compile Include="Controllers\NganhDuocController.cs" />
+    <Compile Include="Controllers\NganhYController.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
+    <Compile Include="Controllers\ThongKeController.cs" />
+    <Compile Include="Models\LuongYViewModel.cs" />
+    <Compile Include="Models\CapLaiATSHViewModel.cs" />
+    <Compile Include="Models\ChungChiDuocSearchViewModel.cs" />
+    <Compile Include="Models\CNSearchViewModel.cs" />
+    <Compile Include="Models\ChungChiSearchViewModel.cs" />
+    <Compile Include="Models\BoSungViewModel.cs" />
+    <Compile Include="Models\ChungTuKemTheoViewModel.cs" />
+    <Compile Include="Models\HoSoGDP_DSKhoViewModel.cs" />
+    <Compile Include="Models\HoSoGDPViewModel.cs" />
+    <Compile Include="Models\HoSoPartialModel.cs" />
+    <Compile Include="Models\FileDinhKemViewModel.cs" />
+    <Compile Include="Models\HoSoTiepNhanViewModel.cs" />
+    <Compile Include="Models\HoSoGPPViewModel.cs" />
+    <Compile Include="Models\ATSHViewModel.cs" />
+    <Compile Include="Models\QuangCaoTrangThietBiViewModel.cs" />
+    <Compile Include="Models\HoSoViewModel.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
+    <Compile Include="Models\Settings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RouteConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documentation\Documentation.css" />
+    <Content Include="Documentation\Documentation.html" />
+    <Content Include="License.txt" />
+    <Content Include="module.css" />
+    <Content Include="ReleaseNotes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NghiepVuModule.dnn">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BuildScripts\ModulePackage.targets" />
+    <Content Include="BuildScripts\MSBuild.Community.Tasks.Targets" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_LocalResources\Settings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Providers\DataProviders\SqlDataProvider\00.00.01.SqlDataProvider" />
+    <Content Include="Providers\DataProviders\SqlDataProvider\Uninstall.SqlDataProvider" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Script\hoso\hoso.index.min.js">
+      <DependentUpon>hoso.index.js</DependentUpon>
+    </Content>
+    <Content Include="Script\hoso\hoso.khonggiaiquyet.min.js">
+      <DependentUpon>hoso.khonggiaiquyet.js</DependentUpon>
+    </Content>
+    <Content Include="Script\hoso\hoso.quatrinhxuly.min.js">
+      <DependentUpon>hoso.quatrinhxuly.js</DependentUpon>
+    </Content>
+    <Content Include="Script\hoso\hoso.themhoso.antoansinhhoc_CapLai.js" />
+    <Content Include="Script\hoso\hoso.themhoso.antoansinhhoc_CapMoi.js" />
+    <Content Include="Script\hoso\hoso.themhoso.antoansinhhoc.js" />
+    <Content Include="Script\hoso\hoso.themhoso.cfs.js" />
+    <Content Include="Script\hoso\hoso.themhoso.ccDuoc.js" />
+    <Content Include="Script\hoso\hoso.themhoso.ccDuoc.Caplai.js" />
+    <Content Include="Script\hoso\hoso.themhoso.chungchiY.CapMoi.js" />
+    <Content Include="Script\hoso\hoso.themhoso.gdp.js" />
+    <Content Include="Script\hoso\hoso.themhoso.index.min.js">
+      <DependentUpon>hoso.themhoso.index.js</DependentUpon>
+    </Content>
+    <Content Include="Script\hoso\hoso.themhoso.quangcaotrangthietbi.js" />
+    <Content Include="Script\hoso\hoso.themhoso.chungchiY.BoSung.js" />
+    <Content Include="Script\hoso\hoso.themhoso.chungchiY.Caplai.js" />
+    <Content Include="Script\hoso\hoso.themhoso.chungchiY.js" />
+    <Content Include="Script\hoso\hoso.themhoso.congbo.js" />
+    <Content Include="Script\hoso\hoso.themhoso.cosokcb.js" />
+    <Content Include="Script\hoso\hoso.themhoso.giatruyen.js" />
+    <Content Include="Script\hoso\hoso.themhoso.gpp.js" />
+    <Content Include="Script\hoso\hoso.themhoso.hoithao.js" />
+    <Content Include="Script\hoso\hoso.themhoso.index.js" />
+    <Content Include="Script\hoso\hoso.themhoso.index.ver2018_03_05_17_09.min.js" />
+    <Content Include="Script\hoso\hoso.themhoso.luongy.js" />
+    <Content Include="Script\hoso\hoso.themhoso.methadone.js" />
+    <Content Include="Script\hoso\hoso.themhoso.mypham.js" />
+    <Content Include="Script\hoso\hoso.themhoso.nhandao.js" />
+    <Content Include="Script\hoso\hoso.themhoso.phimaudich.js" />
+    <Content Include="Script\hoso\hoso.themhoso.tamthan.js" />
+    <Content Include="Script\hoso\hoso.themhoso.tieuhaohoachat.js" />
+    <Content Include="Script\hoso\hoso.themhoso.vientronhandao.js" />
+    <Content Include="Script\hoso\hoso.tracuuhoso.js" />
+    <Content Include="Script\hoso\hoso.tracuuhoso.min.js">
+      <DependentUpon>hoso.tracuuhoso.js</DependentUpon>
+    </Content>
+    <Content Include="Script\hoso\hoso.khonggiaiquyet.js" />
+    <Content Include="Script\hoso\hoso.quatrinhxuly.js" />
+    <Content Include="Script\hoso\hoso.yeucaubosung.js" />
+    <Content Include="Script\hoso\hoso.yeucaubosung.min.js">
+      <DependentUpon>hoso.yeucaubosung.js</DependentUpon>
+    </Content>
+    <Content Include="Script\lib\jquery.validate.js" />
+    <Content Include="Script\lib\jquery.validate.min.js" />
+    <Content Include="Script\MotCua\motcua.hosotiepnhan.hosokemtheo.js" />
+    <Content Include="Script\MotCua\motcua.hosotiepnhan.hosokemtheo.min.js">
+      <DependentUpon>motcua.hosotiepnhan.hosokemtheo.js</DependentUpon>
+    </Content>
+    <Content Include="Script\MotCua\motcua.hosotiepnhan.js" />
+    <Content Include="Script\MotCua\motcua.hosotiepnhan.min.js">
+      <DependentUpon>motcua.hosotiepnhan.js</DependentUpon>
+    </Content>
+    <Content Include="Script\MotCua\motcua.hosotiepnhan.nguoinophoso.min.js">
+      <DependentUpon>motcua.hosotiepnhan.nguoinophoso.js</DependentUpon>
+    </Content>
+    <Content Include="Script\MotCua\motcua.hosotiepnhan.thongtinhoso.min.js">
+      <DependentUpon>motcua.hosotiepnhan.thongtinhoso.js</DependentUpon>
+    </Content>
+    <Content Include="Script\MotCua\motcua.hosotiepnhan.thongtinkhac.js" />
+    <Content Include="Script\MotCua\motcua.hosotiepnhan.thongtinhoso.js" />
+    <Content Include="Script\MotCua\motcua.hosotiepnhan.thongtinkhac.min.js">
+      <DependentUpon>motcua.hosotiepnhan.thongtinkhac.js</DependentUpon>
+    </Content>
+    <Content Include="Script\MyPham\Danhsachquancaomypham.js" />
+    <Content Include="Script\MyPham\Danhsachquancaomypham.min.js">
+      <DependentUpon>Danhsachquancaomypham.js</DependentUpon>
+    </Content>
+    <Content Include="Script\NganhDuoc\nganhduoc.index.gdp.js" />
+    <Content Include="Script\NganhDuoc\nganhduoc.index.gpp - Copy.min.js">
+      <DependentUpon>nganhduoc.index.gdp.js</DependentUpon>
+    </Content>
+    <Content Include="Script\NganhDuoc\nganhduoc.index.gpp.js" />
+    <Content Include="Script\NganhDuoc\nganhduoc.index.gpp.min.js">
+      <DependentUpon>nganhduoc.index.gpp.js</DependentUpon>
+    </Content>
+    <Content Include="Script\NganhDuoc\nganhduoc.index.ccduoc.js" />
+    <Content Include="Script\NganhDuoc\nganhy.index.danhsachchungchi.min.js">
+      <DependentUpon>nganhduoc.index.ccduoc.js</DependentUpon>
+    </Content>
+    <Content Include="Script\NganhY\nganhy.bc.baocaonganhy.js" />
+    <Content Include="Script\NganhY\nganhy.bc.baocaonganhy.min.js">
+      <DependentUpon>nganhy.bc.baocaonganhy.js</DependentUpon>
+    </Content>
+    <Content Include="Script\NganhY\nganhy.bc.nhapdaukybaocao.js" />
+    <Content Include="Script\NganhY\nganhy.bc.nhapdaukybaocao.min.js">
+      <DependentUpon>nganhy.bc.nhapdaukybaocao.js</DependentUpon>
+    </Content>
+    <Content Include="Script\NganhY\nganhy.index.danhsachchungchi.js" />
+    <Content Include="Script\NganhY\nganhy.index.danhsachchungchi.min.js">
+      <DependentUpon>nganhy.index.danhsachchungchi.js</DependentUpon>
+    </Content>
+    <Content Include="Script\thongke.js" />
+    <Content Include="Script\thongke.min.js">
+      <DependentUpon>thongke.js</DependentUpon>
+    </Content>
+    <Content Include="Script\TraCuuPartial\fieldsearch_top.js" />
+    <Content Include="Script\TraCuuPartial\fieldsearch_top.min.js">
+      <DependentUpon>fieldsearch_top.js</DependentUpon>
+    </Content>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Item\Index.cshtml" />
+    <Content Include="Views\Item\Edit.cshtml" />
+    <Content Include="Views\Settings\Settings.cshtml" />
+    <Content Include="Views\HoSo\Index.cshtml" />
+    <Content Include="Views\NganhY\Index.cshtml" />
+    <Content Include="Views\NganhDuoc\Index.cshtml" />
+    <Content Include="Views\MyPham\Index.cshtml" />
+    <Content Include="Views\HoiThao\Index.cshtml" />
+    <Content Include="Views\ThongKe\Index.cshtml" />
+    <None Include="bundleconfig.json" />
+    <Content Include="Views\HoSo\ThemHoSo.cshtml" />
+    <Content Include="Script\hoso\hoso.index.js" />
+    <Content Include="Views\HoSo\ChungChi\_ThongTinTinChi_CapMoi.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_NguoiDuocCapTinChi.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_TrinhDoChuyenMon.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_QuaTrinhCongTac.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_ThongTinDuocCap.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_TapTinDinhKem.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_NguoiDuocCapTinChi_BoSung.cshtml" />
+    <Content Include="Views\HoSo\QuangCao\_ThongTinGiayDangKy.cshtml" />
+    <Content Include="Views\HoSo\QuangCao\_DonViDangKy.cshtml" />
+    <Content Include="Views\HoSo\QuangCao\_NguoiChiuTrachNhiem.cshtml" />
+    <Content Include="Views\HoSo\AnToanSinhHoc\_ThongTinGiayChungNhan_CapMoi.cshtml" />
+    <Content Include="Views\HoSo\AnToanSinhHoc\_ThongTinCoSo.cshtml" />
+    <Content Include="Views\HoSo\AnToanSinhHoc\_BanKeKhaiTrangThietBi.cshtml" />
+    <Content Include="Views\HoSo\AnToanSinhHoc\_BanKeKhaiNhanSu.cshtml" />
+    <Content Include="Views\HoSo\LuongY\_QuaTrinhHanhNghe.cshtml" />
+    <Content Include="Views\HoSo\LuongY\_ThongTinNguoiDuocCap.cshtml" />
+    <Content Include="Views\HoSo\LuongY\_ThongTinChungNhan.cshtml" />
+    <Content Include="Views\HoSo\GiaTruyen\_ThongTinBaiThuoc.cshtml" />
+    <Content Include="Views\HoSo\GiaTruyen\_ThongTinChungNhanCapLai.cshtml" />
+    <Content Include="Views\HoSo\GiaTruyen\_ThongTinNguoiDuocCap.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinHoSo\_SoBienNhan_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinHoSo\_TrangThaiHoSo_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinNguoi\_DienThoaiEmail_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinNguoi\_GioiTinh_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinNguoi\_LoaiGiayTo_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinNguoi\_SoGiayTo_Row_Haft.cshtml" />
+    <Content Include="Views\HoSo\NhanDao\_DanhSachThanhVien.cshtml" />
+    <Content Include="Views\HoSo\NhanDao\_DonViDeNghi.cshtml" />
+    <Content Include="Views\HoSo\NhanDao\_NguoiChiuTrachNhiemChuyenMon.cshtml" />
+    <Content Include="Views\HoSo\NhanDao\_ThongTinGiayPhep.cshtml" />
+    <Content Include="Views\HoSo\NhanDao\_YKien.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinNguoi\_SoGiayTo_RowRequire_Haft.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinNguoi\_NgayCapNoiCap_Row_Haft.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinDiaChi\_ThongTinDiaChi1_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinDiaChi\_ThongTinDiaChi2_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinDiaChi\_SoNhaDuong1_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\TepDinhKem\_HinhAnh_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinNguoi\_HoTen_Row_Haft.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinNguoi\_NgaySinh_Row_Haft.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinNguoi\_HoTen_RowRequire_Haft.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinDiaChi\_SoNhaDuong2_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinHoSo\_ThongTinHoiDong_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinHoSo\_SoQuyetDinh_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinHoSo\_SoLanCapLai_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinHoSo\_SoLanDieuChinh_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinHoSo\_NgayCapNoiCap_Row_Haft.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinHoSo\_SoGiayPhep_Row.cshtml" />
+    <Content Include="Views\HoSo\ChuThapDo\_ThongTinTram.cshtml" />
+    <Content Include="Views\HoSo\ChuThapDo\_ThongTinGiayPhep.cshtml" />
+    <Content Include="Views\HoSo\CoSoKCB\_DanhSachNhanSu.cshtml" />
+    <Content Include="Views\HoSo\CoSoKCB\_DonViDeNghi.cshtml" />
+    <Content Include="Views\HoSo\CoSoKCB\_NguoiChiuTrachNhiemChuyenMon.cshtml" />
+    <Content Include="Views\HoSo\CoSoKCB\_ThongTinGiayPhep.cshtml" />
+    <Content Include="Views\HoSo\CoSoKCB\_HinhThucToChuc.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\DangKyHoiThao\_DanhMucThuocHoiThao.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\DangKyHoiThao\_DonViDangKy.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\DangKyHoiThao\_DiaDiemVaThoiGian.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\DangKyHoiThao\_NguoiChiuTrachNhiemChuyenMon.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\DangKyHoiThao\_ThongTinGiayDangKy.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinNguoi\_DienThoaiEmail_Row2.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinDiaChi\_ThongTinDiaChi4_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinDiaChi\_SoNhaDuong3_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinDiaChi\_SoNhaDuong4_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinDiaChi\_ThongTinDiaChi3_Row.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\PhiMauDich\_DanhMucThuocDeNghi.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\PhiMauDich\_NguoiNhanThuoc.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\PhiMauDich\_NguoiSuDung.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\PhiMauDich\_ThongTinVanBanChoPhep.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinNguoi\_HoTen_Row_Haft2.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinNguoi\_NgaySinh_Row_Haft2.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\TieuHaoHoaChat\_DanhSachGoiThau.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\TieuHaoHoaChat\_DuToanMuaSam.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\TieuHaoHoaChat\_ThongTinQuyetDinh.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\TieuHaoHoaChat\_NhanXetDanhGia.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\TieuHaoHoaChat\_KetLuanVaKienNghi.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\TieuHaoHoaChat\_TapTinDinhKem.cshtml" />
+    <Content Include="Views\Shared\HoSo\TepDinhKem\_TapTinDinhKem_Row_Haft.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\GPP\_PhanPhoiThuoc.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\GPP\Partial\_ThongTinGiayChungNhan.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\GPP\Partial\_CoSoNhaThuoc.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\GPP\Partial\_NguoiPhuTrachChuyenMon.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\GPP\Partial\_PhamViKinhDoanh.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\GPP\Partial\_ThongTinKiemTra.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinHoSo\_SoCCHN_Row.cshtml" />
+    <Content Include="Views\Shared\HoSo\_NguoiChiuTrachNhiemChuyenMon_Part_Haft.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\TamThan\_TamThan.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\TamThan\Partial\_DonViGoiDuyet.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\TamThan\Partial\_CongTyCungUng.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\TamThan\Partial\_ThongTinPheDuyet.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\TamThan\Partial\_DachSachThuoc.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\Methadone\_Methadone.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\Methadone\Partial\_CongTyCungUng.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\Methadone\Partial\_DachSachThuoc.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\Methadone\Partial\_ThongTinPheDuyet.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\NhanDao\_NhanDao.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\NhanDao\Partial\_CongTyCungUng.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\NhanDao\Partial\_DachSachThuoc.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\NhanDao\Partial\_ThongTinPheDuyet.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\ChungChiDuoc\_ChungChiDuoc.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\KinhDoanhThuoc\Partial\_DonViDeNghi.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\KinhDoanhThuoc\Partial\_HinhThucToChuc.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\KinhDoanhThuoc\Partial\_NguoiChiuTrachNhiemChuyenMon.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\KinhDoanhThuoc\Partial\_ThongTinGiayPhep.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\KinhDoanhThuoc\_KinhDoanhThuoc.cshtml" />
+    <Content Include="Views\HoSo\MyPham\QuangCao\_QuangCao.cshtml" />
+    <Content Include="Views\HoSo\MyPham\QuangCao\Partial\_CoSoDuocCap.cshtml" />
+    <Content Include="Views\HoSo\MyPham\QuangCao\Partial\_ThongTinGiayChungNhan.cshtml" />
+    <Content Include="Views\HoSo\MyPham\CongBo\_CongBo.cshtml" />
+    <Content Include="Views\HoSo\MyPham\CongBo\Partial\_ThongTinNhaSanXuat.cshtml" />
+    <Content Include="Views\HoSo\MyPham\CongBo\Partial\_ThongTinSanPham.cshtml" />
+    <Content Include="Views\HoSo\MyPham\CongBo\Partial\_ThongTinGiayChungNhan.cshtml" />
+    <Content Include="Views\HoSo\MyPham\CFS\_CFS.cshtml" />
+    <Content Include="Views\HoSo\MyPham\CFS\Partial\_CoSoDuocCap.cshtml" />
+    <Content Include="Views\HoSo\MyPham\CFS\Partial\_ThongTinGiayChungNhan.cshtml" />
+    <Content Include="Views\HoSo\MyPham\QuangCao\Partial\_TapTinDinhKem.cshtml" />
+    <Content Include="Views\HoSo\MyPham\QuangCao\Partial\_DanhSachSanPham.cshtml" />
+    <Content Include="Views\HoSo\MyPham\CongBo\Partial\_ThanhPhanSanPham.cshtml" />
+    <Content Include="Views\HoSo\MyPham\CFS\Partial\_SanPhamDeNghi.cshtml" />
+    <Content Include="Views\NganhY\QuangCaoLst.cshtml" />
+    <Content Include="Views\NganhY\AnToanSinhHocLst.cshtml" />
+    <Content Include="Views\NganhY\LuongYLst.cshtml" />
+    <Content Include="Views\NganhY\GiaTruyenLst.cshtml" />
+    <Content Include="Views\NganhY\NhanDaoLst.cshtml" />
+    <Content Include="Views\NganhY\ChuThapDoLst.cshtml" />
+    <Content Include="Views\NganhY\BaoCaoNganhY.cshtml" />
+    <Content Include="Views\NganhY\BaoCaoDonVi.cshtml" />
+    <Content Include="Views\NganhY\NhapDauKyBaoCao.cshtml" />
+    <Content Include="Views\MyPham\QuangCaoMyPham.cshtml" />
+    <Content Include="Views\MyPham\PhieuCongBoSanPham.cshtml" />
+    <Content Include="Views\MyPham\GiayChungNhanLuuHanh.cshtml" />
+    <Content Include="Views\HoiThao\GiayDangKyHoiThao.cshtml" />
+    <Content Include="Views\NganhY\ThuHoi.cshtml" />
+    <Content Include="Views\NganhY\RutChungChi.cshtml" />
+    <Content Include="Views\NganhY\Partial\_ChiTietChungChi.cshtml" />
+    <Content Include="Views\NganhY\Partial\_ButtonChungChi.cshtml" />
+    <Content Include="Views\NganhY\Partial\_Rut.cshtml" />
+    <Content Include="Views\NganhY\Partial\_ThuHoi.cshtml" />
+    <Content Include="Views\NganhDuoc\PhiMauDich.cshtml" />
+    <Content Include="Views\NganhDuoc\BaoCaoTongHop.cshtml" />
+    <Content Include="Views\NganhDuoc\NhanDao.cshtml" />
+    <Content Include="Views\NganhDuoc\Methadone.cshtml" />
+    <Content Include="Views\NganhDuoc\TamThan.cshtml" />
+    <Content Include="Views\NganhDuoc\PhanPhoiGPP.cshtml" />
+    <Content Include="Views\NganhDuoc\NhaThuocGPP.cshtml" />
+    <Content Include="Views\NganhDuoc\HoaChat.cshtml" />
+    <Content Include="Views\NganhDuoc\KinhDoanhThuoc.cshtml" />
+    <Content Include="Views\NganhDuoc\ChungChiDuoc.cshtml" />
+    <Content Include="Views\NganhY\CoSoKCB.cshtml" />
+    <Content Include="Views\HoSo\TraCuuHoSo.cshtml" />
+    <Content Include="Views\HoSo\TraCuuPartial\_FieldSearch_Top.cshtml" />
+    <Content Include="Views\HoSo\TraCuuPartial\_FieldSearch_Bottom.cshtml" />
+    <Content Include="Views\HoSo\_EmptyPage.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_ChungChi.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_CapLai.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_BoSung.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_ThongTinTinChi_CapLai.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_ThongTinTinChi_BoSung.cshtml" />
+    <Content Include="Views\HoSo\QuangCao\_QuangCao.cshtml" />
+    <Content Include="Views\HoSo\ChuThapDo\_ChuThapDo.cshtml" />
+    <Content Include="Views\HoSo\CoSoKCB\_CoSoKCB.cshtml" />
+    <Content Include="Views\HoSo\GiaTruyen\_GiaTruyenCapLai.cshtml" />
+    <Content Include="Views\HoSo\LuongY\_LuongY.cshtml" />
+    <Content Include="Views\HoSo\NhanDao\_NhanDao.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\DangKyHoiThao\_DangKyHoiThao.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\PhiMauDich\_PhiMauDich.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\TieuHaoHoaChat\_TieuHaoHoaChat.cshtml" />
+    <Content Include="Views\HoSo\AnToanSinhHoc\_AnToanSinhHoc_CapMoi.cshtml" />
+    <Content Include="Views\HoSo\AnToanSinhHoc\_AnToanSinhHoc_CapLai.cshtml" />
+    <Content Include="Views\HoSo\AnToanSinhHoc\_ThongTinGiayChungNhan_CapLai.cshtml" />
+    <Content Include="Views\HoSo\GiaTruyen\_GiaTruyenCapMoi.cshtml" />
+    <Content Include="Views\HoSo\GiaTruyen\_ThongTinChungNhanCapMoi.cshtml" />
+    <Content Include="Views\HoSo\ChuThapDo\_ChuThapDoCapLai.cshtml" />
+    <Content Include="Views\HoSo\ChuThapDo\_ThongTinGiayPhepCapLai.cshtml" />
+    <Content Include="Views\HoSo\CoSoKCB\_CoSoKCBCapLai.cshtml" />
+    <Content Include="Views\HoSo\CoSoKCB\_ThongTinGiayPhepCapLai.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\GPP\_NhaThuoc.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\GPP\Partial\_CoSoPhanPhoi.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_TrinhDoChuyenMonBoSung.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_QuaTrinhCongTacBoSung.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_ThongTinDuocCapBoSung.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_TapTinDinhKemBoSung.cshtml" />
+    <Content Include="Views\Shared\HoSo\ThongTinHoSo\_NgayCapNoiCap_Row_Haft_ReadOnly.cshtml" />
+    <Content Include="Views\MotCua\Index.cshtml" />
+    <Content Include="Views\MotCua\Partial\_ThongTinHoSo.cshtml" />
+    <Content Include="Views\MotCua\Partial\_NguoiNopHoSo.cshtml" />
+    <Content Include="Script\MotCua\motcua.hosotiepnhan.nguoinophoso.js" />
+    <Content Include="Views\MotCua\Partial\_HoSoKemTheo.cshtml" />
+    <Content Include="Views\HoSo\Partial\_YeuCauBoSung.cshtml" />
+    <Content Include="Views\HoSo\Partial\_KhongGiaiQuyet.cshtml" />
+    <Content Include="Views\HoSo\Partial\_QuaTrinhXuLy.cshtml" />
+    <Content Include="Views\MotCua\Partial\_ThongTinKhac.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_PopUpSearchChungChi.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_PopUpSearchChungChiDuoc.cshtml" />
+    <Content Include="Views\HoSo\AnToanSinhHoc\_NgayCapThoiHan_Haft.cshtml" />
+    <Content Include="Views\HoSo\AnToanSinhHoc\_CapDo_Row.cshtml" />
+    <Content Include="Views\HoSo\AnToanSinhHoc\_PopUpSearch.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_NguoiDuocCapTinChi_Form_Share.cshtml" />
+    <Content Include="Views\HoSo\ChungChi\_ThongTinDuocCap_PhamViHoatDong_Share.cshtml" />
+    <Content Include="Views\HoSo\DuocPham\ChungChiDuoc\_CapLai.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Item.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>13808</DevelopmentServerPort>
+          <DevelopmentServerVPath>
+          </DevelopmentServerVPath>
+          <IISUrl>http://localhost:6001/desktopmodules/mvc/NghiepVuModule</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:6001</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <Extension>zip</Extension>
+    <DNNFileName>NghiepVuModule</DNNFileName>
+    <PackageName>NghiepVuModule</PackageName>
+  </PropertyGroup>
+  <Import Project="BuildScripts\ModulePackage.Targets" />
+  <Target Name="AfterBuild" DependsOnTargets="PackageModule">
+  </Target>
+</Project>

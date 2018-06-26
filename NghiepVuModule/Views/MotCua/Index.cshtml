@@ -1,0 +1,80 @@
+﻿
+@{
+    Layout = "~/DesktopModules/MVC/SoYTe.GUI/TrangChuModule/Views/Shared/_Layout.cshtml";
+}
+
+<div class="syt-content mt-85">
+    <div class="container nopadding">
+        <div class="sytClearFix dnnClear"></div>
+        <div class="syt-content-div-title paddingMin">
+            <p>
+                <span class="ml-5 sknadTitle-white font-size-16">
+                    Hồ Sơ&nbsp;
+                    <span class="glyphicon glyphicon-triangle-right font-size-9"></span>
+                    &nbsp;
+                    Thêm hồ sơ
+                </span>
+            </p>
+        </div>
+        <div class="div_them_ho_so">
+            <div class="hdf">
+                <input type="hidden" value="@ViewBag.HoSoId" name="hdfHoSoId" />
+                <input type="hidden" value="" name="hdfTrangThaiHoSoID" />
+                <input type="hidden" value="" name="hdfSoBienNhan" />
+            </div>
+            @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/MotCua/Partial/_ThongTinHoSo.cshtml")
+            @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/MotCua/Partial/_NguoiNopHoSo.cshtml")
+            @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/MotCua/Partial/_HoSoKemTheo.cshtml")
+            @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/MotCua/Partial/_ThongTinKhac.cshtml")
+            <div class="col-md-12">
+                <div class="container-fluid">
+                    <div class="row mt-10 pr-15">
+                        <div class="col-md-2 text-right  syt-label">
+                            <span class="sknadTitle-gray-normal font-size-13"> Ghi chú </span>
+                        </div>
+                        <div class="col-md-8 paddingMin">
+                            <textarea class="width-100 syt-radius-3 min-h-30 paddingMin" name="GhiChu" style="height:100px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="syt-content-div-icon-search">
+                <div class="sytClearFix-19 dnnClear "></div>
+                <div class="col-md-12">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-2 paddingMin">
+                                <input class="cursor-pointer sytButton sknadTitle-white width-100 btn_Luu"
+                                       type="button" value="Lưu" />
+                            </div>
+                            <div class="col-md-2 paddingMin">
+                                <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700 btn_Them_Moi"
+                                       value="Thêm mới" />
+                            </div>
+                            <div class="col-md-2 paddingMin">
+                                <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700 btn_Xoa_Ho_So"
+                                       value="Xóa" />
+                            </div>
+                            <div class="col-md-2 paddingMin">
+                                <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700 btn_In_Bien_Nhan"
+                                       value="In biên nhận" />
+                            </div>
+                            <div class="col-md-2 paddingMin">
+                                <input type="button" data-prev="@ViewBag.prev" class="cursor-pointer sknadButtonExport width-100 font-weight-700 btn_Tro_Ve"
+                                       value="Trở về" />
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2"> </div>
+                </div>
+            </div>
+            <div class="sytClearFix-19 dnnClear "></div>
+        </div>
+    </div>
+
+
+    <!--Dev js-->
+    <script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/MotCua/motcua.hosotiepnhan.min.js?v=1.0.1"></script>
+    <!---->

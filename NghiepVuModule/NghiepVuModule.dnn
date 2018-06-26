@@ -1,0 +1,1486 @@
+<dotnetnuke type="Package" version="5.0">
+  <packages>
+    <!--Begin Mô đun Hồ Sơ-->
+
+    <package name="NV.HoSo.Module" type="Module" version="00.00.01">
+      <friendlyName>NV.HoSo.Module</friendlyName>
+      <description>NV.HoSo.Module</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>DesktopModules/MVC/SoYTe.GUI/NghiepVuModule</basePath>
+            <resourceFile>
+              <name>Resources.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.HoSo.Module</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.HoSo.Module</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/HoSo/Index.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+        <component type="Assembly">
+          <assemblies>
+            <assembly>
+              <name>NghiepVuModule.dll</name>
+              <path>bin</path>
+            </assembly>
+          </assemblies>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.ThemHoSo.Module" type="Module" version="00.00.01">
+      <friendlyName>NV.ThemHoSo.Module</friendlyName>
+      <description>NV.ThemHoSo.Module</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.ThemHoSo.Module</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.ThemHoSo.Module</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/HoSo/ThemHoSo.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.TraCuuHoSo.Module" type="Module" version="00.00.01">
+      <friendlyName>NV.TraCuuHoSo.Module</friendlyName>
+      <description>NV.TraCuuHoSo.Module</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.TraCuuHoSo.Module</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.TraCuuHoSo.Module</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/HoSo/TraCuuHoSo.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+    <!--End Mô đun Hồ Sơ-->
+
+    <!--Begin Mô đun Ngành Y-->
+
+    <package name="NV.NganhY.Module" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhY.Module</friendlyName>
+      <description>NV.NganhY.Module</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhY.Module</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhY.Module</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhY/Index.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.NganhY.QuangCaoLst" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhY.QuangCaoLst</friendlyName>
+      <description>NV.NganhY.QuangCaoLst</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhY.QuangCaoLst</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhY.QuangCaoLst</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhY/QuangCaoLst.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.NganhY.AnToanSinhHocLst" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhY.AnToanSinhHocLst</friendlyName>
+      <description>NV.NganhY.AnToanSinhHocLst</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhY.AnToanSinhHocLst</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhY.AnToanSinhHocLst</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhY/AnToanSinhHocLst.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+    
+    <package name="NV.NganhY.LuongYLst" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhY.LuongYLst</friendlyName>
+      <description>NV.NganhY.LuongYLst</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhY.LuongYLst</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhY.LuongYLst</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhY/LuongYLst.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.NganhY.GiaTruyenLst" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhY.GiaTruyenLst</friendlyName>
+      <description>NV.NganhY.GiaTruyenLst</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhY.GiaTruyenLst</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhY.GiaTruyenLst</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhY/GiaTruyenLst.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.NganhY.NhanDaoLst" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhY.NhanDaoLst</friendlyName>
+      <description>NV.NganhY.NhanDaoLst</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhY.NhanDaoLst</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhY.NhanDaoLst</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhY/NhanDaoLst.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+    
+    <package name="NV.NganhY.ChuThapDoLst" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhY.ChuThapDoLst</friendlyName>
+      <description>NV.NganhY.ChuThapDoLst</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhY.ChuThapDoLst</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhY.ChuThapDoLst</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhY/ChuThapDoLst.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.NganhY.BaoCaoNganhY" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhY.BaoCaoNganhY</friendlyName>
+      <description>NV.NganhY.BaoCaoNganhY</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhY.BaoCaoNganhY</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhY.BaoCaoNganhY</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhY/BaoCaoNganhY.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.NganhY.BaoCaoDonVi" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhY.BaoCaoDonVi</friendlyName>
+      <description>NV.NganhY.BaoCaoDonVi</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhY.BaoCaoDonVi</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhY.BaoCaoDonVi</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhY/BaoCaoDonVi.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.NganhY.CoSoKCB" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhY.CoSoKCB</friendlyName>
+      <description>NV.NganhY.CoSoKCB</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhY.CoSoKCB</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhY.CoSoKCB</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhY/CoSoKCB.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+    
+    <!--End Mô đun Ngành Y-->
+
+    <!--Begin Mô đun Ngành Duoc-->
+
+    <package name="NV.NganhDuoc.Module" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhDuoc.Module</friendlyName>
+      <description>NV.NganhDuoc.Module</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhDuoc.Module</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhDuoc.Module</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhDuoc/Index.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.NganhDuoc.PhiMauDich" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhDuoc.PhiMauDich</friendlyName>
+      <description>NV.NganhDuoc.PhiMauDich</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhDuoc.PhiMauDich</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhDuoc.PhiMauDich</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhDuoc/PhiMauDich.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+    
+    <package name="NV.NganhDuoc.HoaChat" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhDuoc.HoaChat</friendlyName>
+      <description>NV.NganhDuoc.HoaChat</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhDuoc.HoaChat</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhDuoc.HoaChat</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhDuoc/HoaChat.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+    
+    <package name="NV.NganhDuoc.NhaThuocGPP" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhDuoc.NhaThuocGPP</friendlyName>
+      <description>NV.NganhDuoc.NhaThuocGPP</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhDuoc.NhaThuocGPP</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhDuoc.NhaThuocGPP</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhDuoc/NhaThuocGPP.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+    
+    <package name="NV.NganhDuoc.PhanPhoiGPP" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhDuoc.PhanPhoiGPP</friendlyName>
+      <description>NV.NganhDuoc.PhanPhoiGPP</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhDuoc.PhanPhoiGPP</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhDuoc.PhanPhoiGPP</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhDuoc/PhanPhoiGPP.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.NganhDuoc.TamThan" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhDuoc.TamThan</friendlyName>
+      <description>NV.NganhDuoc.TamThan</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhDuoc.TamThan</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhDuoc.TamThan</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhDuoc/TamThan.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.NganhDuoc.Methadone" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhDuoc.Methadone</friendlyName>
+      <description>NV.NganhDuoc.Methadone</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhDuoc.Methadone</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhDuoc.Methadone</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhDuoc/Methadone.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.NganhDuoc.NhanDao" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhDuoc.NhanDao</friendlyName>
+      <description>NV.NganhDuoc.NhanDao</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhDuoc.NhanDao</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhDuoc.NhanDao</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhDuoc/NhanDao.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.NganhDuoc.BaoCaoTongHop" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhDuoc.BaoCaoTongHop</friendlyName>
+      <description>NV.NganhDuoc.BaoCaoTongHop</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhDuoc.BaoCaoTongHop</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhDuoc.BaoCaoTongHop</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhDuoc/BaoCaoTongHop.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.NganhDuoc.ChungChiDuoc" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhDuoc.ChungChiDuoc</friendlyName>
+      <description>NV.NganhDuoc.ChungChiDuoc</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhDuoc.ChungChiDuoc</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhDuoc.ChungChiDuoc</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhDuoc/ChungChiDuoc.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.NganhDuoc.KinhDoanhThuoc" type="Module" version="00.00.01">
+      <friendlyName>NV.NganhDuoc.KinhDoanhThuoc</friendlyName>
+      <description>NV.NganhDuoc.KinhDoanhThuoc</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.NganhDuoc.KinhDoanhThuoc</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.NganhDuoc.KinhDoanhThuoc</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/NganhDuoc/KinhDoanhThuoc.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+    <!--End Mô đun Ngành Dược-->
+
+    <!--Begin Mô đun Mỹ phẩm-->
+
+    <package name="NV.MyPham.Module" type="Module" version="00.00.01">
+      <friendlyName>NV.MyPham.Module</friendlyName>
+      <description>NV.MyPham.Module</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.MyPham.Module</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.MyPham.Module</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/MyPham/Index.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.MyPham.QuangCaoMyPham" type="Module" version="00.00.01">
+      <friendlyName>NV.MyPham.QuangCaoMyPham</friendlyName>
+      <description>NV.MyPham.QuangCaoMyPham</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.MyPham.QuangCaoMyPham</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.MyPham.QuangCaoMyPham</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/MyPham/QuangCaoMyPham.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.MyPham.PhieuCongBoSanPham" type="Module" version="00.00.01">
+      <friendlyName>NV.MyPham.PhieuCongBoSanPham</friendlyName>
+      <description>NV.MyPham.PhieuCongBoSanPham</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.MyPham.PhieuCongBoSanPham</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.MyPham.PhieuCongBoSanPham</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/MyPham/PhieuCongBoSanPham.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.MyPham.GiayChungNhanLuuHanh" type="Module" version="00.00.01">
+      <friendlyName>NV.MyPham.GiayChungNhanLuuHanh</friendlyName>
+      <description>NV.MyPham.GiayChungNhanLuuHanh</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.MyPham.GiayChungNhanLuuHanh</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.MyPham.GiayChungNhanLuuHanh</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/MyPham/GiayChungNhanLuuHanh.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <!--End Mô đun Mỹ phẩm-->
+
+    <!--Begin Mô đun Hội thảo-->
+
+    <package name="NV.HoiThao.Module" type="Module" version="00.00.01">
+      <friendlyName>NV.HoiThao.Module</friendlyName>
+      <description>NV.HoiThao.Module</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.HoiThao.Module</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.HoiThao.Module</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/HoiThao/Index.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <package name="NV.HoiThao.GiayDangKyHoiThao" type="Module" version="00.00.01">
+      <friendlyName>NV.HoiThao.GiayDangKyHoiThao</friendlyName>
+      <description>NV.HoiThao.GiayDangKyHoiThao</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.HoiThao.GiayDangKyHoiThao</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.HoiThao.GiayDangKyHoiThao</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/HoiThao/GiayDangKyHoiThao.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <!--End Mô đun Hội thảo-->
+
+    <!--Begin Mô đun Thống kê-->
+
+    <package name="NV.ThongKe.Module" type="Module" version="00.00.01">
+      <friendlyName>NV.ThongKe.Module</friendlyName>
+      <description>NV.ThongKe.Module</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.ThongKe.Module</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.ThongKe.Module</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/ThongKe/Index.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <!--End Mô đun Thống kê-->
+
+    <!--Begin Mô đun Một cửa Index-->
+
+    <package name="NV.MotCua.Index" type="Module" version="00.00.01">
+      <friendlyName>NV.MotCua.Index</friendlyName>
+      <description>NV.MotCua.Index</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name></name>
+        <organization>Tài</organization>
+        <url></url>
+        <email></email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">08.00.01</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NV.MotCua.Index</moduleName>
+            <foldername>SoYTe.GUI\NghiepVuModule</foldername>
+            <businessControllerClass/>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NV.MotCua.Index</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>NghiepVuModule.Controllers/MotCua/Index.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+      </components>
+    </package>
+
+    <!--Begin Mô đun Một cửa Index-->
+    
+  </packages>
+</dotnetnuke>

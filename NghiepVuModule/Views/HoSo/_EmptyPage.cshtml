@@ -1,0 +1,169 @@
+﻿@{
+    Layout = "~/DesktopModules/MVC/SoYTe.GUI/TrangChuModule/Views/Shared/_Layout.cshtml";
+}
+@using DotNetNuke.Web.Client.ClientResourceManagement
+
+<div class="syt-content mt-85">
+    <div class="container nopadding">
+        <div class="sytClearFix dnnClear"></div>
+        <div class="syt-content-div-title paddingMin">
+            <p>
+                <span class="ml-5 sknadTitle-white font-size-16">
+                    Hồ Sơ&nbsp; 
+                    <span class="glyphicon glyphicon-triangle-right font-size-9"></span>
+                    &nbsp; 
+                    Thêm hồ sơ
+                </span>
+            </p>
+        </div>
+        <div class="sytClearFix dnnClear"></div>
+        <div class="col-md-12 background-F2">
+            <div class="sytClearFix-10 dnnClear "></div>
+            <div class="col-md-12 mt-10">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-5   text-right syt-label">
+                            <span class="sknadTitle-gray-normal font-size-13"> Lĩnh vực </span>
+                        </div>
+                        <div class="col-md-7 nopadding text-left">
+                            <select class="sknadSelect width-100 adselect sl_linh_vuc_ho_so_index"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-3  text-right syt-label">
+                            <span class="sknadTitle-gray-normal font-size-13"> Tên thủ tục </span>
+                        </div>
+                        <div class="col-md-9 nopadding text-left">
+                            <select class="sknadSelect width-100 adselect sl_thu_tuc_ho_so_index"> </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sytClearFix-10 dnnClear "></div>
+        </div>
+        
+        <div class="div_tong hidden">
+        
+        </div>
+        <div class="syt-content-div-icon-search hidden">
+            <div class="sytClearFix-19 dnnClear "></div>
+            <div class="col-md-12">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-2 paddingMin">
+                            <input class="cursor-pointer sytButton sknadTitle-white width-100 btn_Luu"
+                                   type="button" value="Lưu" />
+                        </div>
+                        <div class="col-md-3 paddingMin text-center btn_chuyen">
+                            <div class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                 aria-haspopup="true" aria-expanded="false">
+                                <input class="cursor-pointer sytButtonChuyen sknadTitle-white width-100"
+                                       type="button" value="Chuyển trạng thái" />
+                                <span class="glyphicon glyphicon-triangle-bottom sytButtonChuyen-icon font-size-9"></span>
+                            </div>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a class="next_menu cursor-pointer" tabindex="-1">Phân công xử lý</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="cursor-pointer">
+                                            <a tabindex="-1">
+                                                <i class="fa fa-user-o syt-icon-user" aria-hidden="true"></i>
+                                                Nguyễn văn A
+                                            </a>
+                                        </li>
+                                        <li class="cursor-pointer">
+                                            <a tabindex="-1">
+                                                <i class="fa fa-user-o syt-icon-user" aria-hidden="true"></i>
+                                                Nguyễn văn B
+                                            </a>
+                                        </li>
+                                        <li class="cursor-pointer">
+                                            <a tabindex="-1">
+                                                <i class="fa fa-user-o syt-icon-user" aria-hidden="true"></i>
+                                                Nguyễn văn C
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" tabindex="-1">Another action</a>
+                                </li>
+                                <li>
+                                    <a href="#" tabindex="-1">Something else here 123 hihi</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 paddingMin">
+                            <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                   value="Xóa" />
+                        </div>
+                        <div class="col-md-2 paddingMin relative">
+                            <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                   value="In ấn" data-toggle="dropdown" />
+                            <span class="glyphicon glyphicon-triangle-bottom sytButtonChuyen-icon font-size-9 color-blue"></span>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">In đề xuất </a></li>
+                                <li><a href="#">In chứng chỉ</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 paddingMin">
+                            <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700 btn_Tro_Ve"
+                                   value="Trở về" />
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-2"> </div>
+            </div>
+        </div>
+        <div class="sytClearFix-19 dnnClear "></div>
+    </div>
+</div>
+
+
+<input type="hidden" value="@ViewBag.HoSoId" name="hdfHoSoId" />
+<input type="hidden" value="@ViewBag.LinhVucId" name="hdfLinhVucId" />
+<input type="hidden" value="@ViewBag.ThuTucId" name="hdfThuTucId" />
+<input type="hidden" value="@ViewBag.TrangThaiId" name="hdfTrangThaiId" />
+<input type="hidden" value="@ViewBag.DauKy" name="hdfDauKy" />
+<input type="hidden" value="@ViewBag.Prev" name="hdfPrev" />
+<input type="hidden" name="hdfChungChiHanhNgheYID" />
+
+<script>
+    var rvtoken = $("input[name='__RequestVerificationToken']").val();
+    var moduleId = @Dnn.ModuleContext.ModuleId;
+    var tabId = @Dnn.ModuleContext.TabId;
+</script>
+<div class="sytClearFix dnnClear"></div>
+
+
+<!--Dev JS-->
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.index.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.antoansinhhoc.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.luongy.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.giatruyen.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.nhandao.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.cosokcb.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.hoithao.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.phimaudich.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.tieuhaohoachat.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.gpp.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.tamthan.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.methadone.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.vientronhandao.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.mypham.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.congbo.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.cfs.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.chungchiY.js"></script>
+
+<!--End Dev JS-->
+
+
+<!--Deploy JS-->
+<!--
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.themhoso.index.ver2018_03_05_17_09.min.js"></script>
+-->
+<!--End Deploy JS-->

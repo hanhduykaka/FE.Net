@@ -1,0 +1,49 @@
+﻿<div class="col-md-12">
+    <div class="container-fluid mt-10">
+        <div class="sytClearFix dnnClear"></div>
+        <div class="strike">
+            <span>TẬP TIN ĐÍNH KÈM</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-12 syt-dynamic-div syt-dnm-lv1-tt3">
+    <div class="sytClearFix dnnClear"></div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-2 text-right mt-10"></div>
+            <div class="col-md-10">
+                <div class="container-fluid mt-10">
+                    <div class="col-md-12 chk-parent">
+                        <div class="col-md-5">
+                            <div class="div_lst_tap_dinh_kem_truoc mt-35"></div>
+                        </div>
+                        <div class="col-md-1 text-center">
+                            <input type="checkbox" class="chk-this" data-action="LoadFile" name="DinhKemFile"/>
+                        </div>
+                        <div class="col-md-6 img-parent div-upload-parent">
+                            <div class="col-md-12">
+                                <span class="font-size-13 color-7B" >Hỗ trợ định dạng tập tin: </span>
+                                <span class="font-size-13 color-black" >.doc, .docx, .xls ,.xlsx ,.pdf, .jpg, .jpeg, .tiff, .gif, .png , .sig , .enc </span>
+                            </div>
+                            <p class="upload_link btnThem_tap_dinh_kem cursor-pointer upload-this">
+                                <u class="syt_u_disable font-size-13 font-weight-700">
+                                    Thêm tập tin
+                                </u>
+                            </p>
+                            
+                            <input type="file" name ="file" onchange="previewTapDinhKem()" id="file_Dinh_kem" disabled="disabled"
+                                   class="hidden upload upload_tap_dinh_kem upload-destination chk-dynamic" multiple
+                                   accept=".doc,.docx, .xls, .xlsx, .pdf, .jpg, .jpeg, .png, .tiff, .gif, .sig, .enc"
+                            />
+
+                            <div class="div_lst_tap_dinh_kem"></div>
+                        </div>
+                    </div>
+                    <div class="sytClearFix dnnClear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

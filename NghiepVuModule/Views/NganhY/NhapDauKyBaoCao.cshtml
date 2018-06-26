@@ -1,0 +1,179 @@
+﻿@{
+    Layout = "~/DesktopModules/MVC/SoYTe.GUI/TrangChuModule/Views/Shared/_Layout.cshtml";
+}
+<div class="syt-content mt-85">
+    <div class="container nopadding">
+        <div class="syt-content-div-title paddingMin">
+            <p>
+                <span class="ml-5 sknadTitle-white font-size-16">
+                    Ngành y &nbsp; &nbsp;
+                    <span class="glyphicon glyphicon-triangle-right font-size-9"></span>
+                    &nbsp; &nbsp;
+                    Báo cáo của các đơn vị trực thuộc
+                    <span class="glyphicon glyphicon-triangle-right font-size-9"></span>
+                    &nbsp; &nbsp;
+                    Nhập báo cáo
+                </span>
+            </p>
+        </div>
+        <div class="syt-content-div-box-search">
+            <div class="sytClearFix-19 dnnClear "></div>
+            <div class="sytClearFix-min dnnClear "></div>
+            <div class="col-md-12 mt-10">
+                <div class="row">
+                    <div class="col-md-2  text-right  syt-label">
+                        <span class="sknadTitle-gray-normal font-size-13  line-height-1_8-Em"> Ngành </span>
+                    </div>
+                    <div class="col-md-2 nopadding">
+                        <input type="radio" name="bao_cao_nganh" checked="checked" />
+                        <span class="mr-5">Y </span>
+                        <input type="radio" name="bao_cao_nganh" />
+                        <span class="mr-5">Dược</span>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2  text-right  syt-label">
+                        <span class="sknadTitle-gray-normal font-size-13"> Loại báo cáo </span>
+                    </div>
+                    <div class="col-md-4 nopadding">
+                        <select class="sknadSelect width-100 adselect">
+                            <option class="sknadTitle-gray-normal font-size-13"> --//-- </option>
+                            <option class="sknadTitle-gray-normal font-size-13"> Trạm  </option>
+                            <option class="sknadTitle-gray-normal font-size-13"> Điểm sơ cấp cứu  </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mt-10">
+                <div class="row">
+                    <div class="col-md-2  text-right  syt-label">
+                        <span class="sknadTitle-gray-normal font-size-13"> Theo văn bản số </span>
+                    </div>
+                    <div class="col-md-4 nopadding">
+                        <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" />
+                    </div>
+                    <div class="col-md-2  text-right  syt-label">
+                        <span class="sknadTitle-gray-normal font-size-13"> Ngày văn bản  </span>
+                    </div>
+                    <div class="col-md-2 nopadding">
+                        <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mt-10">
+                <div class="row">
+                    <div class="col-md-2  text-right  syt-label">
+                        <span class="sknadTitle-gray-normal font-size-13"> Nơi phát hành</span>
+                    </div>
+                    <div class="col-md-4 nopadding">
+                        <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mt-10">
+                <div class="row">
+                    <div class="col-md-2  text-right  syt-label">
+                        <span class="sknadTitle-gray-normal font-size-13"> Tên đơn vị, cơ sở </span>
+                    </div>
+                    <div class="col-md-4 nopadding">
+                        <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mt-10">
+                <div class="row">
+                    <div class="col-md-2  text-right  syt-label">
+                        <span class="sknadTitle-gray-normal font-size-13"> Ghi chú </span>
+                    </div>
+                    <div class="col-md-4 nopadding">
+                        <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" />
+                    </div>
+                </div>
+            </div>
+            
+          
+            
+            <div class="col-md-12 mt-10">
+                <div class="row">
+                    <div class="col-md-2  text-right  syt-label">
+                        <span class="sknadTitle-gray-normal font-size-13"> Tập tin  </span>
+                    </div>
+                    <div class="col-md-10  div-upload-parent">
+                        <div class="col-md-2">
+                            <p class="upload_link btnThem_tap_dinh_kem cursor-pointer upload-this">
+                                <u class="syt_u font-size-13 font-weight-700">
+                                    Thêm tập tin
+                                </u>
+                            </p>
+                            <input type="file" class="hidden upload upload_tap_dinh_kem upload-destination" accept="image/*" />
+                        </div>
+                        <div class="col-md-10"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 mt-10">
+                <div class="row">
+                    <div class="col-md-2  text-right  syt-label">
+                        <span class="sknadTitle-gray-normal font-size-13"> Người gửi  </span>
+                    </div>
+                    <div class="col-md-4 nopadding">
+                        <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" />
+                    </div>
+                    <div class="col-md-2  text-right  syt-label">
+                        <span class="sknadTitle-gray-normal font-size-13"> Ngày gửi  </span>
+                    </div>
+                    <div class="col-md-2 nopadding">
+                        <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="syt-content-div-icon-search">
+            <div class="sytClearFix-19 dnnClear "></div>
+            <div class="col-md-12">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="row text-right">
+                        <div class="col-md-3 paddingMin">
+                            <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                   type="button" value="Lưu" />
+                        </div>
+                        <div class="col-md-3 paddingMin">
+                            <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                   value="Xóa" />
+                        </div>
+                        <div class="col-md-3 paddingMin relative">
+                            <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                   value="In ấn"  data-toggle="dropdown"/>
+                            <span class="glyphicon glyphicon-triangle-bottom sytButtonChuyen-icon font-size-9 color-blue"></span>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">In đề xuất </a></li>
+                                <li><a href="#">In chứng chỉ</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 paddingMin  paddingTop-12">    
+                            <a href="@Url.Action("BaoCaoDonVi", "NganhY", new {id = 1})" 
+                               class="syt-a-button syt-button-white sknadButtonExport width-100">
+                              Trở về
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+        <div class="sytClearFix-min dnnClear "></div>
+    <div class="sytClearFix-min dnnClear "></div>
+    <div class="mt10 paddingBottom"></div>
+    </div>
+</div>
+<script>
+    var rvtoken = $("input[name='__RequestVerificationToken']").val();
+    var moduleId = @Dnn.ModuleContext.ModuleId;
+    var tabId = @Dnn.ModuleContext.TabId;
+</script>
+<div class="sytClearFix dnnClear"></div>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/NganhY/nganhy.index.danhsachchungchi.min.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/NganhY/nganhy.bc.baocaonganhy.min.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/NganhY/nganhy.bc.nhapdaukybaocao.min.js"></script>
+

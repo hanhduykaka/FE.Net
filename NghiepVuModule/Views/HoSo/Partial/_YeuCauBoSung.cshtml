@@ -1,0 +1,106 @@
+﻿<div class="container-fluid mt-10">
+    <div class="sytClearFix dnnClear"></div>
+    <div class="col-md-12">
+        <div class="container-fluid mt-10">
+            <div class="sytClearFix dnnClear"></div>
+            <div class="strike">
+                <span>THÔNG TIN HỒ SƠ</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="sytClearFix dnnClear"></div>
+    <div class="col-md-12">
+        <div class="container-fluid">
+            <div class="row mt-10">
+                <div class="col-md-3 text-right  syt-label">
+                    <span class="sknadTitle-gray-normal font-size-13"> Số biên nhận </span>
+                </div>
+                <div class="col-md-3 syt-label">
+                    <label class="sknadTitle-gray-bold font-size-13" name="YCBS_SoBienNhan" />
+                </div>
+                <div class="col-md-3 text-right  syt-label">
+                    <span class="sknadTitle-gray-normal font-size-13"> Ngày nhận </span>
+                </div>
+                <div class="col-md-3  syt-label">
+                    <label class="sknadTitle-gray-bold font-size-13" name="YCBS_NgayNhan" />
+                </div>
+            </div>
+            <div class="row mt-10">
+                <div class="col-md-3 text-right  syt-label">
+                    <span class="sknadTitle-gray-normal font-size-13"> Họ tên người nộp </span>
+                </div>
+                <div class="col-md-3  syt-label">
+                    <label class="sknadTitle-gray-bold font-size-13 bold" name="YCBS_HoTenNguoiNop" />
+                </div>
+                <div class="col-md-3 text-right  syt-label">
+                    <span class="sknadTitle-gray-normal font-size-13"> Số giấy tờ </span>
+                </div>
+                <div class="col-md-3  syt-label">
+                    <label class="sknadTitle-gray-bold font-size-13 " name="YCBS_SoGiayTo" />
+                </div>
+            </div>
+            <div class="row mt-10 ">
+                <div class="col-md-3 text-right  syt-label">
+                    <span class="sknadTitle-gray-normal font-size-13"> Thủ tục </span>
+                </div>
+                <div class="col-md-9  yt-label">
+                    <label class="sknadTitle-gray-bold font-size-13 bold" name="YCBS_ThuTuc" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sytClearFix dnnClear"></div>
+    <div class="col-md-12">
+        <div class="container-fluid mt-10">
+            <div class="sytClearFix dnnClear"></div>
+            <div class="strike">
+                <span>THÔNG TIN BỔ SUNG</span>
+            </div>
+        </div>
+    </div>
+    <div class="sytClearFix dnnClear"></div>
+    <div class="col-md-12 div_yeu_cau_bo_sung">
+        <div class="container-fluid">
+            <div class="row mt-10">
+                <div class="col-md-3 text-right syt-label">
+                    <span class="sknadTitle-gray-normal font-size-13"> Ngày yêu cầu bổ sung <span style="color:#FF0000;">*</span></span>
+                </div>
+                <div class="col-md-3 paddingMin">
+                    <input class="width-100 syt-radius-3 min-h-30 paddingMin date-picker require"
+                           name="YCBS_NgayYeuCauBS" type="text" />
+                </div>
+
+            </div>
+            <div class="row mt-10 ">
+                <div class="col-md-3 text-right  syt-label">
+                    <span class="sknadTitle-gray-normal font-size-13"> Yêu cầu bổ sung <span style="color:#FF0000;">*</span></span>
+                </div>
+                <div class="col-md-9 paddingMin">
+                    <textarea class="width-100 syt-radius-3 min-h-60 paddingMin require" name="YCBS_YeuCauBS" rows="4"></textarea>
+                </div>
+            </div>
+            <div class="row mt-10">
+                <div class="col-md-3 text-right  syt-label">
+                    <span class="sknadTitle-gray-normal font-size-13"> Người nhận <span style="color:#FF0000;">*</span></span>
+                </div>
+                <div class="col-md-3 paddingMin">
+                    <select class="sknadSelect width-100 adselect sl_ycbs_nguoi_nhan_index paddingMin require" name="YCBS_NguoiNhan"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sytClearFix-19 dnnClear"></div>
+    <div class="col-md-12">
+        <div class="col-md-5"></div>
+        <div class="col-md-2 text-center paddingMin">
+            <input class="cursor-pointer sytButton sknadTitle-white width-100 btn_Thuc_Hien_YCBS"
+                   type="button" value="Thực hiện" />
+        </div>
+        <div class="col-md-5"></div>
+    </div>
+</div>
+<!--Dev js-->
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.yeucaubosung.min.js?v=1.0.0"></script>
+<!---->

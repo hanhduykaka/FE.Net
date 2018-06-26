@@ -1,0 +1,99 @@
+﻿
+@{
+    Layout = "~/DesktopModules/MVC/SoYTe.GUI/TrangChuModule/Views/Shared/_Layout.cshtml";
+}
+@using DotNetNuke.Web.Client.ClientResourceManagement
+
+<div class="syt-content mt-85">
+    <div class="container nopadding">
+        <div class="syt-content-div-title paddingMin">
+            <p>
+                <span class="ml-5 sknadTitle-white font-size-16">
+                    Thống kê
+                </span>
+            </p>
+        </div>
+        <div class="content-chart paddingMin">
+            <div class="col-md-12 nopadding">
+                <div class="col-md-6 nopadding">
+                    <div class="syt-content-div-heading-2 nopadding">
+                        <span class="ml-5 sknadTitle-blue-sea-normal font-size-16">
+                            Cơ sở khám chữa bệnh
+                        </span>
+                    </div>
+                    <div class="col-md-12">
+                        <div id="chartCSKCB" style="min-width: 320px;min-height: 320px"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 nopadding">
+                    <div class="syt-content-div-heading-2 nopadding">
+                        <span class="ml-5 sknadTitle-blue-sea-normal font-size-16">
+                            Cơ sở kinh doanh thuốc
+                        </span>
+                    </div>
+                    <div class="col-md-12">
+                        <div id="chartCSThuoc" style="min-width: 320px;min-height: 320px"></div>
+                    </div>
+                    <div class="col-md-12">
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="sytClearFix dnnClear"></div>
+
+            <div class="col-md-12 nopadding">
+                <div class="col-md-6 nopadding">
+                    <div class="syt-content-div-heading-2 nopadding">
+                        <span class="ml-5 sknadTitle-blue-sea-normal font-size-16">
+                            Người hành nghề Y
+                        </span>
+                    </div>
+                    <div class="col-md-12">
+                        <div id="chartNgheY" style="min-width: 320px;min-height: 320px"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 nopadding">
+                    <div class="syt-content-div-heading-2 nopadding">
+                        <span class="ml-5 sknadTitle-blue-sea-normal font-size-16">
+                            Người hành nghề dược
+                        </span>
+                    </div>
+                    <div class="col-md-12">
+                        <div id="chartNgheDuoc" style="min-width: 320px;min-height: 320px"></div>
+                    </div>
+                    <div class="col-md-12">
+                       
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sytClearFix dnnClear"></div>
+
+            <div class="col-md-12 nopadding">
+                <div class="syt-content-div-heading-2 nopadding">
+                    <span class="ml-5 sknadTitle-blue-sea-normal font-size-16">
+                        Thành phần nhân lực
+                    </span>
+                </div>
+                <div class="col-md-12">
+                    <div id="chartNhanLuc" style="min-width: 320px;min-height: 320px"></div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="sytClearFix dnnClear"></div>
+
+
+
+
+@{
+    <script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/thongke.min.js"></script>
+    ClientResourceManager.RegisterStyleSheet(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/css/thongke.min.css");
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/HightChart/hightchart.js");
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/HightChart/hightchartexport.js");
+}

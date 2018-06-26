@@ -1,0 +1,46 @@
+﻿<div class="col-md-12">
+    <div class="container-fluid mt-10">
+        <div class="sytClearFix dnnClear"></div>
+        <div class="strike">
+            <span>ĐƠN VỊ ĐĂNG KÝ</span>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="sytClearFix dnnClear"></div>
+<div class="col-md-12">
+    <div class="container-fluid">
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Tên đơn vị </span>
+            </div>
+            <div class="col-md-6 nopadding">
+                <input class="width-100 syt-radius-3 min-h-30 paddingMin" name="TenDonVi" maxlength="200" type="text" />
+            </div>
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13">Mã doanh nghiệp </span>
+            </div>
+            <div class="col-md-2 nopadding">
+                <input class="width-100 syt-radius-3 min-h-30 paddingMin varchar" maxlength="20" name="MaDoanhNghiep" type="text" />
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="sytClearFix dnnClear"></div>
+<div class="col-md-12">
+    <div class="container-fluid">
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Địa chỉ </span>
+            </div>
+            @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/Shared/HoSo/ThongTinDiaChi/_ThongTinDiaChi1_Row.cshtml")
+            @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/Shared/HoSo/ThongTinDiaChi/_SoNhaDuong1_Row.cshtml")
+        </div>
+    </div>
+</div>
+@Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/Shared/HoSo/ThongTinNguoi/_DienThoaiEmail_Row.cshtml")
+
+

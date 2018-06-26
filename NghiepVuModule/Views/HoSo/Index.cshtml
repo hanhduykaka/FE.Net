@@ -1,0 +1,140 @@
+﻿
+@{
+    Layout = "~/DesktopModules/MVC/SoYTe.GUI/TrangChuModule/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .fade {
+         -webkit-transition: opacity 1s; /* Safari */
+    transition: opacity 1s;
+}
+
+.dropdown-submenu:hover .dropdown-content {
+    display: block;
+}
+.modal-header{
+    background-color: rgba(67,148,163,1);
+}
+</style>
+<div class="syt-content mt-85">
+    <div class="container nopadding">
+        <div class="syt-content-div-title paddingMin">
+            <p>
+                <span class="ml-5 sknadTitle-white font-size-16">
+                    Hồ Sơ&nbsp; &nbsp;
+                    <span class="glyphicon glyphicon-triangle-right font-size-9"></span>
+                    &nbsp; &nbsp;
+                    Danh sách hồ sơ
+                </span>
+            </p>
+        </div>
+        <div class="sytClearFix dnnClear "></div>
+        <div class="sytClearFix-19 dnnClear "></div>
+        <div class="syt-content-div-box-search">
+            @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/HoSo/TraCuuPartial/_FieldSearch_Top.cshtml")
+            <div class="sytClearFix-min dnnClear "></div>
+            <div class="col-md-12 mt-10">
+                @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/HoSo/TraCuuPartial/_FieldSearch_Bottom.cshtml")
+            </div>
+        </div>
+        <div class="sytClearFix dnnClear "></div>
+        <div class="sytClearFix-19 dnnClear "></div>
+        <div class="syt-content-div-icon-search">
+            <div class="col-md-12">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-2 paddingMin">
+                            <input class="cursor-pointer sytButton sknadTitle-white width-100 btn_search"
+                                   type="button" value="Tìm" />
+                        </div>
+                        <div class="col-md-3 paddingMin">
+                            <input class="cursor-pointer sytButton sknadTitle-white width-100 btn_Them_Ho_So"
+                                   type="button" value="Thêm hồ sơ" />
+                        </div>
+                        <div class="col-md-4 paddingMin text-center ">
+                            <input aria-haspopup="true" aria-expanded="false" disabled="disabled"
+                                   class="btn_chuyen cursor-pointer sytButtonChuyen sknadTitle-white width-100 dropdown-toggle"
+                                   type="button" value="Chuyển trạng thái" data-toggle="dropdown" role="button" />
+                            <span class="glyphicon glyphicon-triangle-bottom sytButtonChuyen-icon font-size-9"></span>
+                            <ul class="dropdown-menu ul_chuyen_trang_thai">
+                             
+                            </ul>
+                        </div>
+                        <div class="col-md-3 paddingMin">
+                            <input type="button" class="btn_xuat_danh_sach cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                   value="Xuất danh sách" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sytClearFix dnnClear "></div>
+        <div class="syt-content-div-nav">
+            <ul class="nav nav-tabs" id="ul_tab_Ds"></ul>
+        </div>
+        <div class="syt-content-div-tab-content tab-content">
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-yeu-cau-bo-sung" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg"style="width:750px" >
+        <div class="modal-content">
+            <div class="modal-header text-left">
+                <button type="button" class="close sknadTitle-white" data-dismiss="modal">&times;</button>
+                <h5 class="modal-title">
+                    <u class="syt-label font-weight-italic font-weight-800 sknadTitle-white">Yêu cầu bổ sung hồ sơ</u>
+                </h5>
+                <div class="dnnClear clearfix"></div>
+            </div>
+            <div class="modal-body">
+                @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/HoSo/Partial/_YeuCauBoSung.cshtml")
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-khong-giai-quyet" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" style="width:750px">
+        <div class="modal-content">
+            <div class="modal-header text-left">
+                <button type="button" class="close sknadTitle-white" data-dismiss="modal">&times;</button>
+                <h5 class="modal-title">
+                    <u class="syt-label font-weight-italic font-weight-800 sknadTitle-white">Không giải quyết hồ sơ</u>
+                </h5>
+                <div class="dnnClear clearfix"></div>
+            </div>
+            <div class="modal-body">
+                @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/HoSo/Partial/_KhongGiaiQuyet.cshtml")
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modal-qua-trinh-xu-ly" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content div-select-parent">
+            <div class="modal-header text-left" >
+                <button type="button" class="close sknadTitle-white" data-dismiss="modal">&times;</button>
+                <h5 class="modal-title">
+                    <u class="syt-label font-weight-italic font-weight-800 sknadTitle-white">Quá trình xử lý hồ sơ</u>
+                </h5>            </div>
+            <div class="modal-body  div_edit_table_parent">
+                @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/HoSo/Partial/_QuaTrinhXuLy.cshtml")
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" value="@ViewBag.TrangThai" name="hdfTrangThai" />
+<script>
+    var   rvtoken = $("input[name='__RequestVerificationToken']").val();
+    var moduleId = @Dnn.ModuleContext.ModuleId;
+    var tabId = @Dnn.ModuleContext.TabId;
+</script>
+@*<a href="@Url.Action("ThemHoSo","HoSo",new {id = 1})">huhuhu</a>
+    <a onclick="fn_click(this)">bbbbb</a>*@
+<div class="sytClearFix dnnClear"></div>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/hoso/hoso.index.min.js?v=1.0.2"></script>

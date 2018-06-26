@@ -1,0 +1,67 @@
+﻿<div class="col-md-12">
+    <div class="container-fluid mt-10">
+        <div class="sytClearFix dnnClear"></div>
+        <div class="strike">
+            <span>THÔNG TIN GIẤY CHỨNG NHẬN</span>
+        </div>
+    </div>
+</div>
+
+@Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/Shared/HoSo/ThongTinHoSo/_SoBienNhan_Row.cshtml")
+@Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/Shared/HoSo/ThongTinHoSo/_TrangThaiHoSo_Row.cshtml")
+
+<div class="sytClearFix dnnClear"></div>
+<div class="col-md-12">
+    <div class="container-fluid">
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Số giấy chứng nhận </span>
+            </div>
+            <div class="col-md-2 nopadding">
+                <div class="col-md-11 col-sm-11 col-xs-11 nopadding">
+                    <input maxlength="20"
+                           class="width-100 syt-radius-3 min-h-30 paddingMin background-require require SoGiayChungNhan_CapLai varchar"
+                           name="SoChungNhan" type="text" />
+                </div>
+                <div class="col-md-1 col-sm-1 col-xs-1 nopadding relative">
+                    <span class="glyphicon glyphicon-search font-size-16 cursor-pointer syt-icon-search"
+                          id="icon_search"></span>
+                </div>
+            </div>
+            @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/HoSo/AnToanSinhHoc/_NgayCapThoiHan_Haft.cshtml")
+        </div>
+    </div>
+</div>
+
+<div class="sytClearFix dnnClear"></div>
+
+<div  class="_form_thong_tin_lan_cap_lai">
+    <div class="col-md-12">
+        <div class="container-fluid">
+            <div class="row mt-10 pr-15">
+                <div class="col-md-2 text-right  syt-label">
+                    <span class="sknadTitle-gray-normal font-size-13"> Lần cấp lại </span>
+                </div>
+                <div class="col-md-2 nopadding">
+                    <input class="width-100 syt-radius-3 min-h-30 paddingMin" min="1" step="1" max="2147483647"
+                           name="LanCapLai" type="number" oninput="validity.valid||(value='');" />
+                </div>
+                <div class="col-md-2 text-right  syt-label">
+                    <span class="sknadTitle-gray-normal font-size-13"> Ngày cấp lại</span>
+                </div>
+                <div class="col-md-2 nopadding">
+                    <input class="width-100 syt-radius-3 min-h-30 paddingMin date-picker dp-ngay-cap-lai" name="NgayCapLai" type="text" />
+                </div>
+                <div class="col-md-2 text-right  syt-label">
+                    <span class="sknadTitle-gray-normal font-size-13"> Lý do cấp lại </span>
+                </div>
+                <div class="col-md-2 nopadding">
+                    <select class="sknadSelect width-100 adselect" name="LyDoCapLai"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/HoSo/AnToanSinhHoc/_CapDo_Row.cshtml")
+

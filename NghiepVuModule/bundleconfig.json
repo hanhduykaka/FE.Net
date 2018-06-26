@@ -1,0 +1,110 @@
+[
+  {
+    "outputFileName": "Script/thongke.min.js",
+    "inputFiles": [
+      "Script/thongke.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/hoso/hoso.index.min.js",
+    "inputFiles": [
+      "Script/hoso/hoso.index.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/NganhY/nganhy.index.danhsachchungchi.min.js",
+    "inputFiles": [
+      "Script/NganhY/nganhy.index.danhsachchungchi.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/NganhY/nganhy.bc.baocaonganhy.min.js",
+    "inputFiles": [
+      "Script/NganhY/nganhy.bc.baocaonganhy.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/NganhY/nganhy.bc.nhapdaukybaocao.min.js",
+    "inputFiles": [
+      "Script/NganhY/nganhy.bc.nhapdaukybaocao.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/MyPham/Danhsachquancaomypham.min.js",
+    "inputFiles": [
+      "Script/MyPham/Danhsachquancaomypham.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/hoso/hoso.tracuuhoso.min.js",
+    "inputFiles": [
+      "Script/hoso/hoso.tracuuhoso.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/hoso/hoso.khonggiaiquyet.min.js",
+    "inputFiles": [
+      "Script/hoso/hoso.khonggiaiquyet.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/hoso/hoso.yeucaubosung.min.js",
+    "inputFiles": [
+      "Script/hoso/hoso.yeucaubosung.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/hoso/hoso.quatrinhxuly.min.js",
+    "inputFiles": [
+      "Script/hoso/hoso.quatrinhxuly.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/MotCua/motcua.hosotiepnhan.hosokemtheo.min.js",
+    "inputFiles": [
+      "Script/MotCua/motcua.hosotiepnhan.hosokemtheo.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/MotCua/motcua.hosotiepnhan.nguoinophoso.min.js",
+    "inputFiles": [
+      "Script/MotCua/motcua.hosotiepnhan.nguoinophoso.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/MotCua/motcua.hosotiepnhan.min.js",
+    "inputFiles": [
+      "Script/MotCua/motcua.hosotiepnhan.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/MotCua/motcua.hosotiepnhan.thongtinhoso.min.js",
+    "inputFiles": [
+      "Script/MotCua/motcua.hosotiepnhan.thongtinhoso.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/MotCua/motcua.hosotiepnhan.thongtinkhac.min.js",
+    "inputFiles": [
+      "Script/MotCua/motcua.hosotiepnhan.thongtinkhac.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/TraCuuPartial/fieldsearch_top.min.js",
+    "inputFiles": [
+      "Script/TraCuuPartial/fieldsearch_top.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/hoso/hoso.themhoso.index.min.js",
+    "inputFiles": [
+      "Script/hoso/hoso.themhoso.index.js"
+    ]
+  },
+  {
+    "outputFileName": "Script/NganhDuoc/nganhduoc.index.gpp.min.js",
+    "inputFiles": [
+      "Script/NganhDuoc/nganhduoc.index.gpp.js"
+    ]
+  }
+]

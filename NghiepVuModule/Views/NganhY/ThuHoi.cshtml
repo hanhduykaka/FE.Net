@@ -1,0 +1,34 @@
+﻿
+
+@{
+    Layout = "~/DesktopModules/MVC/SoYTe.GUI/TrangChuModule/Views/Shared/_Layout.cshtml";
+}
+
+<div class="syt-content mt-85">
+    <div class="container nopadding">
+        <div class="syt-content-div-title paddingMin">
+            <p>
+                <span class="ml-5 sknadTitle-white font-size-16">
+                    Ngành y &nbsp; &nbsp;
+                    <span class="glyphicon glyphicon-triangle-right font-size-9"></span>
+                    &nbsp; &nbsp;
+                    Chứng chỉ hành nghề KCB
+                    <span class="glyphicon glyphicon-triangle-right font-size-9"></span>
+                    &nbsp; &nbsp; Thu hồi chứng chỉ
+                </span>
+            </p>
+        </div>
+        @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/NganhY/Partial/_ChiTietChungChi.cshtml")
+        @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/NganhY/Partial/_ThuHoi.cshtml")
+        @Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/NganhY/Partial/_ButtonChungChi.cshtml")
+    </div>
+</div>
+<script>
+    var rvtoken = $("input[name='__RequestVerificationToken']").val();
+    var moduleId = @Dnn.ModuleContext.ModuleId;
+    var tabId = @Dnn.ModuleContext.TabId;
+</script>
+
+<div class="sytClearFix dnnClear"></div>
+
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/NganhY/nganhy.index.danhsachchungchi.min.js"></script>

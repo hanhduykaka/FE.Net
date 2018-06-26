@@ -1,0 +1,80 @@
+﻿<div class="sytClearFix dnnClear"></div>
+<div class="col-md-12">
+    <div class="container-fluid mt-10">
+        <div class="sytClearFix dnnClear"></div>
+        <div class="strike">
+            <span>THÔNG TIN HỒ SƠ</span>
+        </div>
+    </div>
+</div>
+
+<div class="sytClearFix dnnClear"></div>
+<div class="col-md-12">
+    <div class="container-fluid">
+      
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Lĩnh vực <span style="color:#FF0000;">*</span></span>
+            </div>
+            <div class="col-md-2 paddingMin">
+                <select class="sknadSelect width-100 adselect sl_linh_vuc_ho_so_index" name="LinhVuc"></select>
+            </div>
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Thủ tục <span style="color:#FF0000;">*</span></span>
+            </div>
+            <div class="col-md-6 paddingMin">
+                <select class="sknadSelect width-100 adselect sl_thu_tuc_ho_so_index" name="ThuTuc"> </select>
+            </div>
+        </div>     
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Số biên nhận <span style="color:#FF0000;">*</span></span>
+            </div>
+            <div class="col-md-2 paddingMin">
+                <input class="width-100 syt-radius-3 min-h-30 paddingMin require" name="SoBienNhan" type="text" />
+            </div>
+            <div class="col-md-2 text-left  syt-label">
+                <input class="" name="TuDong" type="checkbox" />
+                <span class="sknadTitle-gray-normal font-size-13 chk_tu_dong"> Tự động</span>
+            </div>
+        </div>   
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Số ngày giải quyết</span>
+            </div>
+            <div class="col-md-2 paddingMin">
+                <input class="width-100 syt-radius-3 min-h-30 paddingMin" disabled name="SoNgayGiaiQuyet" type="text" />
+            </div>
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Ngày nhận <span style="color:#FF0000;">*</span></span>
+            </div>
+            <div class="col-md-2 paddingMin">
+                <input class="width-100 syt-radius-3 min-h-30 paddingMin date-picker-from require"
+                       name="NgayNhan" type="text" />
+            </div>
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Ngày hẹn trả <span style="color:#FF0000;">*</span></span>
+            </div>
+            <div class="col-md-2 paddingMin">
+                <input class="width-100 syt-radius-3 min-h-30 paddingMin date-picker-to require"
+                       name="NgayHenTra" type="text" />
+            </div>
+        </div>
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Lệ phí</span>
+            </div>
+            <div class="col-md-2 paddingMin">
+                <input class="width-100 syt-radius-3 min-h-30 paddingMin" name="LePhi" type="number" min="0" value="0" />
+            </div>
+            <div class="col-md-2 text-left  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> VNĐ</span>
+            </div>
+          
+            
+        </div>
+    </div>
+</div>
+<!--Dev js-->
+<script src="~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Script/MotCua/motcua.hosotiepnhan.thongtinhoso.min.js?v=1.0.0"></script>
+<!---->

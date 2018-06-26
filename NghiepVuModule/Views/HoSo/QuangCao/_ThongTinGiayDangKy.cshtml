@@ -1,0 +1,71 @@
+﻿<div class="col-md-12">
+    <div class="container-fluid mt-10">
+        <div class="sytClearFix dnnClear"></div>
+        <div class="strike">
+            <span>THÔNG TIN GIẤY ĐĂNG KÝ</span>
+        </div>
+    </div>
+</div>
+<div class="sytClearFix dnnClear"></div>
+
+@Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/Shared/HoSo/ThongTinHoSo/_SoBienNhan_Row.cshtml")
+@Html.Partial("~/DesktopModules/MVC/SoYTe.GUI/NghiepVuModule/Views/Shared/HoSo/ThongTinHoSo/_TrangThaiHoSo_Row.cshtml")
+
+<div class="sytClearFix dnnClear"></div>
+
+
+<div class="sytClearFix dnnClear"></div>
+<div class="col-md-12">
+    <div class="container-fluid">
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Số giấy đăng ký </span>
+            </div>
+            <div class="col-md-2 nopadding">
+                <input class="width-100 syt-radius-3 min-h-30 paddingMin varchar" 
+                       maxlength="20" name="SoGiayDangKy" type="text" />
+            </div>
+            <div class="col-md-8"> </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="sytClearFix dnnClear"></div>
+<div class="col-md-12">
+    <div class="container-fluid">
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Số tiếp nhận </span>
+            </div>
+            <div class="col-md-2 nopadding">
+                <input class="width-100 syt-radius-3 min-h-30 paddingMin background-require varchar"
+                       maxlength="20"
+                       name="SoTiepNhan" type="text" />
+            </div>
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Ngày tiếp nhận </span>
+            </div>
+            <div class="col-md-2 nopadding">
+                <input class="width-100 syt-radius-3 min-h-30 paddingMin date-picker dpk_NgayTiepNhan"
+                        name="NgayTiepNhan" type="text" />
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sytClearFix dnnClear"></div>
+<div class="col-md-12">
+    <div class="container-fluid">
+        <div class="row mt-10 pr-15">
+            <div class="col-md-2 text-right  syt-label">
+                <span class="sknadTitle-gray-normal font-size-13"> Dịch vụ quảng cáo </span>
+            </div>
+            <div class="col-md-6 nopadding">
+                <input class="width-100 syt-radius-3 min-h-30 paddingMin" name="DichVuQuangCao" maxlength="400" type="text" />
+            </div>
+        </div>
+    </div>
+</div>
