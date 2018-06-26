@@ -1,0 +1,178 @@
+﻿
+@using System.Text.RegularExpressions
+@using DotNetNuke.Web.Mvc.Helpers
+@using DotNetNuke.Web.Client.ClientResourceManagement
+@{
+    ClientResourceManager.RegisterStyleSheet(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/css/StyleCommon.min.css");
+    ClientResourceManager.RegisterStyleSheet(Dnn.DnnPage, "~/Portals/_default/Skins/DNNB3/lib/Dropzone/dropzone.form.min.css");
+    ClientResourceManager.RegisterStyleSheet(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/css/home.min.css");
+    ClientResourceManager.RegisterStyleSheet(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/css/font-awesome.min.css");
+    ClientResourceManager.RegisterStyleSheet(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/css/responsive.min.css");
+    ClientResourceManager.RegisterStyleSheet(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/datatables-responsive/dataTables.responsive.min.css");
+    ClientResourceManager.RegisterStyleSheet(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/pnotify/pnotify.custom.min.css");
+    ClientResourceManager.RegisterStyleSheet(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/bootstrap-select/dist/css/bootstrap-select.min.css");
+    ClientResourceManager.RegisterStyleSheet(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/bootstrap-multiple-select/bootstrap-multiple-select.css");
+    ClientResourceManager.RegisterStyleSheet(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/DatePicker/DateTimePicker/css/bootstrap-datetimepicker.min.css");
+}
+<script>
+    var rvtoken = $("input[name='__RequestVerificationToken']").val();
+    var moduleId = @Dnn.ModuleContext.ModuleId;
+    var tabId = @Dnn.ModuleContext.TabId;
+</script>
+
+
+<input id="hdcurTabID" type="hidden" value="@ViewBag.curTabID" />
+<input id="hdcurTabIDParent" type="hidden" value="@ViewBag.curTabIDParent" />
+<input id="hdfPathUploadFile" type="hidden" value="@ViewBag.PathUploadFile" />
+
+
+@*// header*@
+<nav class="navbar mainmenu-area">
+    @*navbar-default*@
+    <div class="container nopadding">
+        <div class="col-md-3 nopadding-mobile">
+            <div class="navbar-header">
+                <div class="div_brand">
+                    <div class="show-inline">
+                        <img class="icon_thuongHieu" src="/Portals/_default/Skins/AdminB3/img/TrangChinh/logo.png" />
+                        <p class="p_brand"><span>QUẢN LÝ CẤP PHÉP</span></p>
+                    </div>
+                </div>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#syt_Menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="collapse navbar-collapse" id="syt_Menu">
+                <ul class="nav navbar-nav">
+                 
+                </ul>
+                <div class="thongbao relative">
+                    <span
+                        class="absolute color-white syt-radius-3 background-red font-weight-700 count_thongbao
+                           font-family-Arial font-size-13 no-border">5</span>
+                    <i class="fa fa-bell color-blue font-size-20 cursor-pointer mr-19" id="ThongBao"></i>
+                    <i class="fa fa-user color-blue font-size-22 cursor-pointer" id="taikhoan"></i>
+                </div>
+                <div id="div_thongbao" class="noidung_thongbao hidden">
+                    <ul class="noidung_thongbao_list">
+                        <li class="item_thongbao">
+                            <p class="item_thongbao_first">
+                                <img src="/Portals/_default/Skins/AdminB3/img/home1/u313.png" class="img_thongbao" />
+                            </p>
+                            <p class="item_thongbao_second">
+                                <span>
+                                    Hồ sơ 22 sắp đến ngày hẹn trả
+                                </span><br />
+                                <span class="time_count">Cách đây 1 giây trước</span>
+                            </p>
+                            <p class="item_thongbao_third">
+                                <img src="/Portals/_default/Skins/AdminB3/img/home1/u301.png" class="img_thongbao" />
+                            </p>
+                        </li>
+                        <li class="item_thongbao">
+                            <p class="item_thongbao_first">
+                                <img src="/Portals/_default/Skins/AdminB3/img/home1/u313.png" class="img_thongbao" />
+                            </p>
+                            <p class="item_thongbao_second">
+                                <span>
+                                    Hồ sơ 22 sắp đến ngày hẹn trả
+                                </span><br />
+                                <span class="time_count">Cách đây 1 giây trước</span>
+                            </p>
+                            <p class="item_thongbao_third">
+                                <img src="/Portals/_default/Skins/AdminB3/img/home1/u301.png" class="img_thongbao" />
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="div_taikhoan" class="noidung_taikhoan hidden">
+                    <span class="tentaikhoan font-weight-700 font-size-13 font-family-Arial font-style-normal"></span>
+                    <ul class="ul_taikhoan">
+                        <li class="cursor-pointer padding-all-5 margin-all-3">
+                            <span class="font-weight-400 font-size-13 font-family-Arial font-style-normal">Thông tin tài khoản</span>
+                        </li>
+                        <li class="cursor-pointer padding-all-5  margin-all-3">
+                            <span class="font-weight-400 font-size-13 font-family-Arial font-style-normal">Đổi mật khẩu</span>
+                        </li>
+                        <li class="cursor-pointer padding-all-5 margin-all-3">
+                            <span onclick='window.location.href = "/?ctl=logoff"'
+                                  class="font-weight-400 font-size-13 font-family-Arial font-style-normal">Đăng xuất</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+@*// header*@
+<div id="mvcContainer-@Dnn.ActiveModule.ModuleID">
+    @RenderBody()
+</div>
+
+<div class="dnnClear sytClearFix-min"></div>
+@*// footer*@
+<div class="SYT-footer mt-10">
+    <div class="container mt-10">
+        <div class="row syt-foot-content">
+            <div class="col-md-12">
+                <div class="col-md-2 mt-10">
+                    <div class="sknadTitle-white-normal  font-size-13 nopadding mt-10">
+                        Lượt truy cập : 15233
+                    </div>
+                    <div class="sknadTitle-white-normal  font-size-13 nopadding  mt-10">
+                        Trực tuyến : 13
+                    </div>
+                </div>
+                <div class="col-md-6   mt-10">
+                    <div class="sknadTitle-white font-size-15 nopadding text-left mt-10">
+                        HỆ THỐNG QUẢN LÝ CẤP PHÉP HÀNH NGHỀ Y DƯỢC
+                    </div>
+                    <div class="sknadTitle-white font-size-13 nopadding text-left  mt-10">
+                        Sở Y Tế Đồng Nai
+                    </div>
+                </div>
+                <div class="col-md-1 mt-10">
+                    <div class="syt-horizontal hide-mobile">
+                        
+                    </div>
+                </div>
+                <div class="col-md-3  mt-10">
+                    <div class="sknadTitle-white-normal font-size-13 nopadding  mt-10">
+                        Hỗ trợ trực tuyến
+                    </div>
+                    <div class="sknadTitle-white-normal font-size-13 nopadding  mt-10">
+                       Điện thoại: 02513.942641
+                    </div>
+                    <div class="sknadTitle-white-normal font-size-13 nopadding  mt-10">
+                       Email:  syt@dongnai.gov.vn
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*// footer*@
+
+@{
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/DNNB3/lib/Dropzone/dropzone.custom.min.js");
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/DNNB3/lib/Dropzone/dropzone.config.min.js");
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/DNNB3/lib/datatable/dataTables.bootstrap.min.js");
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/datatables-responsive/dataTables.responsive.min.js");
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/notification.min.js");
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/pnotify/pnotify.custom.min.js");
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/bootstrap-select/dist/js/bootstrap-select.min.js");
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/bootstrap-multiple-select/bootstrap-multiple-select.min.js");
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/js/syt.sharing.min.js");
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/DatePicker/Moment/moment.js");
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/DatePicker/DateTimePicker/js/bootstrap-datetimepicker.min.js");
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/DatePicker/DateTimePicker/locale.vi.min.js");
+<script src="~/DesktopModules/MVC/SoYTe.GUI/TrangChuModule/Script/layout.min.js"></script>
+
+}

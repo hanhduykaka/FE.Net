@@ -1,0 +1,87 @@
+﻿
+@{
+    Layout = null;
+}
+@using DotNetNuke.Web.Client.ClientResourceManagement
+@{
+    ClientResourceManager.RegisterStyleSheet(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/css/font-awesome.min.css");
+    ClientResourceManager.RegisterStyleSheet(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/css/StyleCommon.min.css");
+    ClientResourceManager.RegisterStyleSheet(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/css/home.min.css");
+    ClientResourceManager.RegisterStyleSheet(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/pnotify/pnotify.custom.min.css");
+
+}
+<script>
+    var rvtoken = $("input[name='__RequestVerificationToken']").val();
+    var moduleId = @Dnn.ModuleContext.ModuleId;
+    var tabId = @Dnn.ModuleContext.TabId;
+</script>
+
+<section class="header-login">
+    <div class="col-md-12">
+        <div class="container-fluid">
+            <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4">
+                <img src="/Portals/_default/Skins/AdminB3/img/TrangChinh/logo.png" />
+            </div>
+            <div class="col-lg-11 col-md-10 col-sm-9 col-xs-8 paddingTop-3em-pc paddingTop-1_5em-mobile nopadding">
+                <span class="font-weight-700 font-size-24 color-blue line-height-25">
+                    HỆ THỐNG QUẢN LÝ CẤP PHÉP HÀNH NGHỀ Y DƯỢC
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="sptClearFix dnnClear"></div>
+<div class="mt-85"></div>
+<div class="mt-10"></div>
+<section class="div-login">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="col-md-3"></div>
+            <div class="col-md-5 marginLeft-50-pc form-login">
+                <div class="mt-10"></div>
+                <div class="mt-10"></div>
+                <div class="col-md-12 mt-30">
+                    <div class="col-md-12 mt-10">
+                        <span class="font-family-Candara font-style-normal font-size-18 color-blue font-weight-700">
+                            Đăng nhập
+                        </span>
+                    </div>
+                    <div class="col-md-12 mt-10">
+                        <input class="width-100 syt-radius-3 min-h-30 paddingMin" name="taiKhoan" type="text" placeholder="Tên đăng nhập"/>
+                        <i class="fa fa-user color-7B absolute font-size-20"></i>
+                    </div>
+                    <div class="col-md-12 mt-10">
+                        <input class="width-100 syt-radius-3 min-h-30 paddingMin" name="matKhau" type="password" placeholder="Mật khẩu"/>
+                        <i class="fa fa-lock color-7B absolute font-size-20"></i>
+                    </div>
+                    <div class="col-md-12 mt-30">
+                        <input class="cursor-pointer sytButton sknadTitle-white width-100 btn_Dang_Nhap"
+                               type="button" value="Đăng nhập" />
+                        <i class="fa fa-arrow-circle-o-right font-size-20 color-white absolute"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="sptClearFix dnnClear"></div>
+<div class="mt-30"></div>
+<div class="sptClearFix dnnClear"></div>
+<section class="footer-login mt-85">
+    <div class="width-100 text-center padding-all-10 background-blue">
+        <span class="sknadTitle-white width-100" >
+           
+            Bản quyền thuộc Công ty TNHH Hệ thống thông tin GMC FPT
+        </span>
+    </div>
+</section>
+<div class="sptClearFix dnnClear"></div>
+<div class="mt-85"></div>
+<div class="mt-10"></div>
+@{
+    <script src="~/DesktopModules/MVC/SoYTe.GUI/TrangChuModule/Script/login.min.js"></script>
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/notification.min.js");
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/lib/pnotify/pnotify.custom.min.js");
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~/Portals/_default/Skins/AdminB3/js/syt.sharing.min.js");
+
+}

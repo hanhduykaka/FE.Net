@@ -1,0 +1,1266 @@
+﻿
+@{
+    Layout = "~/DesktopModules/MVC/SoYTe.GUI/TrangChuModule/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="syt-content mt-85">
+    <div class="container nopadding">
+        <div class="syt-content-div-title paddingMin">
+            <p>
+                <span class="ml-5 sknadTitle-white font-size-16">
+                    Danh Mục
+                </span>
+            </p>
+        </div>
+        <div class="col-md-12">
+            <!--Left Menu -->
+            <div class="col-md-3">
+                <div class="left_div left_div_class">
+                    <ul>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="linhvuc">Lĩnh vực</li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="thutuc">Thủ tục</li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="quytrinhthutuc">
+                            Quy trình thủ tục <br />
+                            <img src="/Portals/_default/Skins/AdminB3/img/danhmuc/line.png" />
+                        </li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="tinhthanh">Tỉnh thành</li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="huyenthi">Huyện thị</li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="phuongxa">Phường xã</li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="noicapphep">
+                            Nơi cấp phép <br />
+                            <img src="/Portals/_default/Skins/AdminB3/img/danhmuc/line.png" />
+                        </li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="trinhdochuyenmon">Trình độ chuyên môn</li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="vitrichuyenmon">Vị trí chuyên môn</li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="phamvihanhngheduoc">Phạm vi hành nghề dược</li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="phamvihoatdongKCB">Phạm vi hoạt động KCB</li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="phamvikinhdoanhthuoc">Phạm vi kinh doanh thuốc</li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="hinhthuctochuc">Hình thức tổ chức</li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="dieukienhanhnghe">Điều kiện hành nghề</li>
+
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="dangsanphammypham">
+                            Dạng sản phẩm mỹ phẩm
+                            <br /><img src="/Portals/_default/Skins/AdminB3/img/danhmuc/line.png" />
+                        </li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="loaibaocao">Loại báo cáo từ đơn vị trực thuộc</li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="lydo">Lý do </li>
+                        <li class="label_class_dm danhmuc_item cursor-pointer" id="gopy">Góp ý</li>
+                    </ul>
+                </div>
+            </div>
+            <!--End Left Menu -->
+            <div class="col-md-9">
+                <!--Linh Vuc -->
+                <div id="right_linhvuc" class="mt-5">
+                    <span class="lable_text">Lĩnh vực</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-8 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" id="inputsearchLinhVuc" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" onclick="searchLinhVuc()" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" onclick="newLinhVuc()" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data" id="tbldmlinhvuc">
+                        <thead>
+                            <tr>
+                                <th class="text text-left bgth font-size-13">STT</th>
+                                <th class="text text-left bgth font-size-13">Mã lĩnh vực</th>
+                                <th class="text text-left bgth font-size-13">Tên lĩnh vực </th>
+                                <th class="text text-left bgth font-size-13">Mô tả</th>
+                                <th class="text text-left bgth font-size-13 ">Sử dụng</th>
+                                <th class="text text-left bgth font-size-13 ">Sửa</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Linh Vuc-->
+                <!--Thu Tuc -->
+                <div id="right_thutuc" class="mt-5">
+                    <span class="lable_text">Thủ tục</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-8 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" id="inputsearchThuTucDM_ThuTucScr" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" onclick="searchThuTuc()" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" onclick="newThuTuc()" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data" id="tbldmthutuc">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13">Lĩnh vực</th>
+                                <th class="text text-center bgth font-size-13"> Mã thủ tục </th>
+                                <th class="text text-center bgth font-size-13">Tên thủ tục</th>
+                                <th class="text text-center bgth font-size-13">Thời gian giải quyết</th>
+                                <th class="text text-left bgth  font-size-13 ">Thời gian nhắc đến hạn</th>
+                                <th class="text text-left bgth  font-size-13 ">Lệ phí (VNĐ)</th>
+                                <th class="text text-center bgth  font-size-13 ">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13 ">Sửa</th>
+
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Thu Tuc-->
+                <!-- Quy Trinh Thu Tuc -->
+                <div id="right_quytrinhthutuc" class="mt-5">
+                    <span class="lable_text">Quy trình thủ tục</span>
+                    <div class="sytClearFix-19 dnnClear "></div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-3 paddingMin">
+                                <select class="sknadSelect width-100 adselect sl_linhvuc_quytrinhthutuc" name="LinhVuc_QuyTrinhThuTuc_Search"></select>
+                            </div>
+                            <div class="col-md-5 paddingMin">
+                                <select class="sknadSelect width-100 adselect sl_thutuc_quytrinhthutuc" name="ThuTuc_QuyTrinhThuTuc_Search"></select>
+                            </div>
+                            <div class="col-md-2 paddingMin">
+                                <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                       type="button" value="Thêm mới" onclick="newQuytrinhThuTuc()" />
+                            </div>
+                            <div class="col-md-2 paddingMin">
+                                <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                       value="Xuất danh sách" />
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data" id="tbldmquytrinhthutuc">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13">Trạng thái hiện tại</th>
+                                <th class="text text-center bgth font-size-13"> Trạng thái tiếp theo </th>
+                                <th class="text text-center bgth font-size-13">Người xử lý tiếp theo</th>
+                                <th class="text text-center bgth  font-size-13 ">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13 ">Sửa</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Quy Trinh Thu Tuc-->
+                <!--Tinh Thanh -->
+                <div id="right_tinhthanh" class="mt-5">
+                    <span class="lable_text">Tỉnh thành</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-8 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13">Mã tỉnh thành</th>
+                                <th class="text text-center bgth font-size-13">Tên tỉnh thành </th>
+                                <th class="text text-center bgth  font-size-13 ">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13 ">Sửa</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Tỉnh thành-->
+                <!--Huyen Thi -->
+                <div id="right_huyenthi" class="mt-5">
+                    <span class="lable_text"> Huyện / thị</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-8 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13">Mã huyện</th>
+                                <th class="text text-center bgth font-size-13">Tên huyện </th>
+                                <th class="text text-center bgth  font-size-13 ">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13 ">Sửa</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Huyen Thi-->
+                <!--Phuogn Xa -->
+                <div id="right_phuongxa" class="mt-5">
+                    <span class="lable_text">Phường / Xã</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-8 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table width="100%" class="table table-striped table-data">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13">Mã huyện</th>
+                                <th class="text text-center bgth font-size-13">Tên huyện </th>
+                                <th class="text text-center bgth  font-size-13 ">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13 ">Sửa</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Phuong Xa-->
+                <!--Nơi cấp phép -->
+                <div id="right_noicapphep" class="mt-5">
+                    <span class="lable_text">Nơi cấp phép</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-8 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13">Mã </th>
+                                <th class="text text-center bgth font-size-13">Tên  </th>
+                                <th class="text text-center bgth  font-size-13 ">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13 ">Sửa</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Nơi cấp phép-->
+                <!--Trinh dộ chuyên môn -->
+                <div id="right_trinhdochuyenmon" class="mt-5">
+                    <span class="lable_text">Trình độ chuyên môn</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-8 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13">Mã </th>
+                                <th class="text text-center bgth font-size-13">Tên  </th>
+
+                                <th class="text text-center bgth  font-size-13 ">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13 ">Sửa</th>
+
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Trình độ chuyên môn-->
+                <!--Vị trí chuyên môn -->
+                <div id="right_vitrichuyenmon" class="mt-5">
+                    <span class="lable_text">Vị trí chuyên môn</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-8 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13">Mã </th>
+                                <th class="text text-center bgth font-size-13">Tên  </th>
+                                <th class="text text-center bgth  font-size-13 ">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13 ">Sửa</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Vị trí chuyên môn-->
+                <!--Phạm vi hành nghề dược -->
+                <div id="right_phamvihanhngheduoc" class="mt-5">
+                    <span class="lable_text">Phạm vi hành nghề dược</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-8 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13">Mã </th>
+                                <th class="text text-center bgth font-size-13">Tên  </th>
+                                <th class="text text-center bgth  font-size-13 ">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13 ">Sửa</th>
+                            </tr>
+                        </thead>
+
+                    </table>
+                </div>
+                <!-- End Phạm vi hành nghề dược-->
+                <!--Phạm vi hoạt động KCB -->
+                <div id="right_phamvihoatdongKCB" class="mt-5">
+                    <span class="lable_text">Phạm vi hoạt động KCB</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-8 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table width="100%" class="table table-striped table-data">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13">Mã </th>
+                                <th class="text text-center bgth font-size-13">Tên  </th>
+                                <th class="text text-center bgth  font-size-13 ">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13 ">Sửa</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Phạm vi hoạt động KCB-->
+                <!--Phạm vi kinh doanh thuoc -->
+                <div id="right_phamvikinhdoanhthuoc" class="mt-5">
+                    <span class="lable_text">Phạm vi kinh doanh thuốc</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-8 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13">Mã </th>
+                                <th class="text text-center bgth font-size-13">Tên  </th>
+                                <th class="text text-center bgth  font-size-13 ">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13 ">Sửa</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Phạm vi kinh doanh thuoc-->
+                <!--Hình thức tổ chức -->
+                <div id="right_hinhthuctochuc" class="mt-5">
+                    <span class="lable_text">Hình thức tổ chức</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-3 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <label class="radio-inline"><input type="radio" name="optradio">Ngành y</label>
+                                    <label class="radio-inline"><input type="radio" name="optradio">Ngành dược</label>
+                                </div>
+                            </div>
+                            <div class="col-md-5 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13"> Ngành  </th>
+                                <th class="text text-center bgth font-size-13">Mã </th>
+                                <th class="text text-center bgth font-size-13">Tên   </th>
+                                <th class="text text-center bgth  font-size-13 ">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13 ">Sửa</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Hình thức tổ chức-->
+                <!--Điều kiện hành nghề -->
+                <div id="right_dieukienhanhnghe" class="mt-5">
+                    <span class="lable_text">Điều kiện hành nghề</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-3 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <label class="radio-inline"><input type="radio" name="optradio">Ngành y</label>
+                                    <label class="radio-inline"><input type="radio" name="optradio">Ngành dược</label>
+                                </div>
+                            </div>
+                            <div class="col-md-5 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13"> Ngành  </th>
+                                <th class="text text-center bgth font-size-13">Mã </th>
+                                <th class="text text-center bgth font-size-13">Tên   </th>
+                                <th class="text text-center bgth  font-size-13 ">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13 ">Sửa</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Điều kiện hành nghề-->
+                <!--Dạng sản phẩm mỹ phẩm -->
+                <div id="right_dangsanphammypham" class="mt-5">
+                    <span class="lable_text">Dạng sản phẩm mỹ phẩm</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-8 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13">Mã </th>
+                                <th class="text text-center bgth font-size-13">Tên Tiếng Việt  </th>
+                                <th class="text text-center bgth font-size-13">Tên Tiếng Anh  </th>
+                                <th class="text text-center bgth  font-size-13 ">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13 ">Sửa</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Dạng sản phẩm mỹ phẩm-->
+                <!--Loại báo cáo đơn vị trực thuộc -->
+                <div id="right_loaibaocao" class="mt-5">
+                    <span class="lable_text">Loại báo cáo đơn vị trực thuộc</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-3 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <label class="radio-inline"><input type="radio" name="optradio">Ngành y</label>
+                                    <label class="radio-inline"><input type="radio" name="optradio">Ngành dược</label>
+                                </div>
+                            </div>
+                            <div class="col-md-5 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13"> Ngành  </th>
+                                <th class="text text-center bgth font-size-13">Tên   </th>
+                                <th class="text text-center bgth  font-size-13 ">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13 ">Sửa</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Loại báo cáo đơn vị trực thuộc-->
+                <!--Lý do -->
+                <div id="right_lydo" class="mt-5">
+                    <span class="lable_text">Lý do</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-12 nopadding">
+                                <div class="col-md-8 nopadding">
+                                    <div class="col-md-12 nopadding">
+                                        <div class="col-md-6 paddingMin">
+                                            <select class="sknadSelect width-100 adselect sl_loaicapphepDM_LyDoScr"></select>
+                                        </div>
+                                        <div class="col-md-6 paddingMin">
+                                            <select class="sknadSelect width-100 adselect sl_loailydoDM_LyDoScr"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" id="inputsearchLyDoDM_LyDoScr" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" onclick="searchLyDo()" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" onclick="newLyDo()" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data" id="tbldmlydo">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13"> Loại cấp phép</th>
+                                <th class="text text-center bgth font-size-13">Loại lý do</th>
+                                <th class="text text-center bgth font-size-13">Lý do</th>
+                                <th class="text text-center bgth  font-size-13">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13">Sửa</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Lý do-->
+                <!--Gop y -->
+                <div id="right_gopy" class="mt-5">
+                    <span class="lable_text">Gợi ý</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-12 nopadding">
+                                <div class="col-md-8 nopadding">
+                                    <div class="col-md-12 nopadding">
+                                        <div class="col-md-6 paddingMin">
+                                            <select class="sknadSelect width-100 adselect sl_loaicapphepDM_GoiYScr"></select>
+                                        </div>
+                                        <div class="col-md-6 paddingMin">
+                                            <select class="sknadSelect width-100 adselect sl_loaigoiyDM_GoiYScr"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 nopadding">
+                                <div class="col-md-12 nopadding">
+                                    <input class="width-100 paddingMin min-h-30 font-weight-italic input_search" placeholder="Nhập nội dung cần tìm" type="text" id="inputsearchGoiYDM_GoiYScr" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Tìm" onclick="searchGoiY()" />
+                                    </div>
+                                    <div class="col-md-4 paddingMin">
+                                        <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                               type="button" value="Thêm mới" onclick="newGoiY()" />
+                                    </div>
+                                    <div class="col-md-5 paddingMin">
+                                        <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                               value="Xuất danh sách" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table width="100%" class="table table-striped table-data" id="tbldmgoiy">
+                        <thead>
+                            <tr>
+                                <th class="text text-center bgth font-size-13">STT</th>
+                                <th class="text text-center bgth font-size-13"> Loại cấp phép</th>
+                                <th class="text text-center bgth font-size-13">Loại gợi ý</th>
+                                <th class="text text-center bgth font-size-13">Gợi ý</th>
+                                <th class="text text-center bgth  font-size-13">Sử dụng</th>
+                                <th class="text text-center bgth  font-size-13">Sửa</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- End Gop Y-->
+                <!---------------------------------------------------- CRUD ---------------------------------------------------->
+                <!-- Thêm Lĩnh Vực-->
+                <div id="right_themlinhvuc" class="mt-5">
+                    <span class="lable_text">Lĩnh Vực</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13"> Mã lĩnh vực </span>
+                                    </div>
+                                    <div class="col-md-7 nopadding">
+                                        <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" id="inputMaLinhVuc" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13"> Tên lĩnh vực </span>
+                                    </div>
+                                    <div class="col-md-7 nopadding">
+                                        <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" id="inputTenLinhVuc" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13"> Mô tả </span>
+                                    </div>
+                                    <div class="col-md-7 nopadding">
+                                        <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" id="inputMoTa" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13"> Sử dụng </span>
+                                    </div>
+                                    <div class="col-md-7 nopadding">
+                                        <input type="checkbox" id="inputUsed" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6  text-right  syt-label">
+                                    </div>
+                                    <div class="col-md-6 nopadding">
+                                        <div class="col-md-3 paddingMin">
+                                            <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                                   type="button" value="Lưu" onclick="saveLinhVuc()" />
+                                        </div>
+                                        <div class="col-md-3 paddingMin">
+                                            <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                                   onclick="backtoDSLinhVuc()" value="Trở về" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Thêm Lĩnh vực-->
+                <!-- Thêm Thủ tục-->
+                <div id="right_themthutuc" class="mt-5">
+                    <span class="lable_text">Thủ tục</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-3  text-right  syt-label">
+                                    <span class="sknadTitle-gray-normal font-size-13">Mã thủ tục <span style="color:#FF0000;">*</span></span>
+                                </div>
+                                <div class="col-md-9 nopadding">
+                                    <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" id="inputMaThuTucDM_ThuTucScr" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3  text-right  syt-label">
+                                    <span class="sknadTitle-gray-normal font-size-13">Tên thủ tục <span style="color:#FF0000;">*</span></span>
+                                </div>
+                                <div class="col-md-9 nopadding">
+                                    <input class="width-100 syt-radius-3 min-h-30 paddingMin" type="text" id="inputTenThuTucDM_ThuTucScr" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3  text-right  syt-label">
+                                    <span class="sknadTitle-gray-normal font-size-13">Thuộc lĩnh vực <span style="color:#FF0000;">*</span></span>
+                                </div>
+                                <div class="col-md-9 nopadding" style="margin: 5px 0;">
+                                    <select class="sknadSelect width-100 adselect sl_thuoclinhvucDM_ThuTucScr"></select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3  text-right  syt-label">
+                                    <span class="sknadTitle-gray-normal font-size-13">Loại cấp phép</span>
+                                </div>
+                                <div class="col-md-9 nopadding" style="margin: 5px 0;">
+                                    <select class="sknadSelect width-100 adselect sl_loaicapphepDM_ThuTucScr"></select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3  text-right  syt-label">
+                                    <span class="sknadTitle-gray-normal font-size-13">Thời gian giải quyết <span style="color:#FF0000;">*</span></span>
+                                </div>
+                                <div class="col-md-3 nopadding">
+                                    <input class="syt-radius-3 min-h-30 paddingMin" type="number" id="inputThoiGianGQThuTucDM_ThuTucScr" style="width: 50%;" /> Ngày
+                                </div>
+                                <div class="col-md-4  text-right  syt-label">
+                                    <span class="sknadTitle-gray-normal font-size-13">Thời gian nhắc đến hạn</span>
+                                </div>
+                                <div class="col-md-2 nopadding">
+                                    <input class="syt-radius-3 min-h-30 paddingMin" type="number" id="inputThoiGianNhacThuTucDM_ThuTucScr" style="width: 70%;" /> Ngày
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3  text-right  syt-label">
+                                    <span class="sknadTitle-gray-normal font-size-13">Lệ phí</span>
+                                </div>
+                                <div class="col-md-9 nopadding">
+                                    <input class="syt-radius-3 min-h-30 paddingMin" type="number" id="inputLePhiDM_ThuTucScr" style="width: 30%;" /> VNĐ
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3  text-right  syt-label">
+                                    <span class="sknadTitle-gray-normal font-size-13"> Sử dụng </span>
+                                </div>
+                                <div class="col-md-9 nopadding">
+                                    <input type="checkbox" id="inputUsedDM_ThuTucScr" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3  text-right  syt-label">
+                                    <span class="sknadTitle-gray-normal font-size-13">Chứng từ kèm theo</span>
+                                </div>
+                                <div class="col-md-9 nopadding">
+                                    <div class="row mt-10 pr-15">
+                                        <div class="container-fluid div_ho_so_kem_theo">
+                                            <table width="100%" class="table table-striped table-data" id="tablechungtukemtheo">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text text-center bgth font-size-13" width="3%">STT</th>
+                                                        <th class="text text-center bgth font-size-13" width="30%">Tên chứng từ kèm theo</th>
+                                                        <th class="text text-center bgth font-size-13" width="10%"> Số bản chính  </th>
+                                                        <th class="text text-center bgth font-size-13" width="10%">Số bản sao</th>
+                                                        <th class="text text-center bgth font-size-13" width="10%">Số bản photo</th>
+                                                        <th class="text text-center bgth font-size-13 " width="3%">Xóa</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="font-size-13"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="syt-content-div-icon-search">
+                                        <div class="col-md-12" style="float:right">
+                                            <div class="row">
+                                                <div class="col-md-10 paddingMin">
+                                                </div>
+                                                <div class="col-md-2 paddingMin">
+                                                    <a href="javascript:void(0)"> <span class="font-size-13 strike a_them_moi_kem_theo_index" style="text-align:right">Thêm mới </span></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2"> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6  text-right  syt-label">
+                                    </div>
+                                    <div class="col-md-6 nopadding">
+                                        <div class="col-md-3 paddingMin">
+                                            <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                                   type="button" value="Lưu" onclick="saveThuTuc()" />
+                                        </div>
+                                        <div class="col-md-3 paddingMin">
+                                            <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                                   onclick="backtoDSThuTuc()" value="Trở về" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Thêm Thủ tục-->
+                <!-- Thêm Quy Trinh-->
+                <div id="right_themquytrinh" class="mt-5">
+                    <span class="lable_text">Quy trình thủ tục</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13"> Trạng thái hiện tại </span>
+                                    </div>
+                                    <div class="col-md-7 nopadding" style="margin:5px 0;">
+                                        <select class="sknadSelect width-100 adselect sl_trangthaihientai_quytrinhthutuc"></select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13"> Trạng thái tiếp theo </span>
+                                    </div>
+                                    <div class="col-md-7 nopadding" style="margin:5px 0;">
+                                        <select class="sknadSelect width-100 adselect sl_trangthaitieptheo_quytrinhthutuc"></select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13"> Người xử lý tiếp theo </span>
+                                    </div>
+                                    <div class="col-md-7 nopadding" style="margin:5px 0;">
+                                        <select class="sknadSelect width-100 adselect sl_nguoixulytieptheo" multiple="multiple"></select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13"> Sử dụng </span>
+                                    </div>
+                                    <div class="col-md-7 paddingMin" style="margin:5px 0;">
+                                        <input type="checkbox" id="inputquytrinhthutucUsed" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label"></div>
+                                    <div class="col-md-7 nopadding">
+                                        <div class="col-md-3 paddingMin">
+                                            <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                                   type="button" value="Lưu" onclick="saveQuyTrinhThuTuc()" />
+                                        </div>
+                                        <div class="col-md-3 paddingMin">
+                                            <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                                   onclick="backtoDSQuyTrinhThuTuc()" value="Trở về" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Thêm Quy Trinh-->
+                <!-- Thêm Lý do-->
+                <div id="right_themlydo" class="mt-5">
+                    <span class="lable_text">Lý do</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13">Loại cấp phép <span style="color:#FF0000;">*</span></span>
+                                    </div>
+                                    <div class="col-md-7 nopadding" style="margin:5px 0;">
+                                        <select class="sknadSelect width-100 adselect sl_loaicapphepupdDM_LyDoScr"></select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13">Loại lý do <span style="color:#FF0000;">*</span></span>
+                                    </div>
+                                    <div class="col-md-7 nopadding" style="margin:5px 0;">
+                                        <select class="sknadSelect width-100 adselect sl_loailydoupdDM_LyDoScr"></select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13">Lý do <span style="color:#FF0000;">*</span></span>
+                                    </div>
+                                    <div class="col-md-7 nopadding" style="margin:5px 0;">
+                                        <textarea class="width-100 syt-radius-3 min-h-30 paddingMin" id="inputTenLyDoupdDM_LyDoScr" style="height: 25%;"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13">Sử dụng</span>
+                                    </div>
+                                    <div class="col-md-7 paddingMin" style="margin:5px 0;">
+                                        <input type="checkbox" id="inputLyDoUsed" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label"></div>
+                                    <div class="col-md-7 nopadding">
+                                        <div class="col-md-3 paddingMin">
+                                            <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                                   type="button" value="Lưu" onclick="saveLyDo()" />
+                                        </div>
+                                        <div class="col-md-3 paddingMin">
+                                            <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                                   onclick="showhideDivLyDo()" value="Trở về" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Thêm Lý do-->
+                <!-- Thêm Gợi ý-->
+                <div id="right_themgoiy" class="mt-5">
+                    <span class="lable_text">Lý do</span>
+                    <div class="syt-content-div-icon-search">
+                        <div class="sytClearFix-19 dnnClear "></div>
+                        <div class="col-md-12">
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13">Loại cấp phép <span style="color:#FF0000;">*</span></span>
+                                    </div>
+                                    <div class="col-md-7 nopadding" style="margin:5px 0;">
+                                        <select class="sknadSelect width-100 adselect sl_loaicapphepupdDM_GoiYScr"></select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13">Loại gợi ý <span style="color:#FF0000;">*</span></span>
+                                    </div>
+                                    <div class="col-md-7 nopadding" style="margin:5px 0;">
+                                        <select class="sknadSelect width-100 adselect sl_loaigoiyupdDM_GoiYScr"></select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13">Gợi ý <span style="color:#FF0000;">*</span></span>
+                                    </div>
+                                    <div class="col-md-7 nopadding" style="margin:5px 0;">
+                                        <textarea class="width-100 syt-radius-3 min-h-30 paddingMin" id="inputTenGoiYupdDM_GoiYScr" style="height: 25%;"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label">
+                                        <span class="sknadTitle-gray-normal font-size-13">Sử dụng</span>
+                                    </div>
+                                    <div class="col-md-7 paddingMin" style="margin:5px 0;">
+                                        <input type="checkbox" id="inputGoiYUsed" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5  text-right  syt-label"></div>
+                                    <div class="col-md-7 nopadding">
+                                        <div class="col-md-3 paddingMin">
+                                            <input class="cursor-pointer sytButton sknadTitle-white width-100"
+                                                   type="button" value="Lưu" onclick="saveGoiY()" />
+                                        </div>
+                                        <div class="col-md-3 paddingMin">
+                                            <input type="button" class="cursor-pointer sknadButtonExport width-100 font-weight-700"
+                                                   onclick="showhideDivGoiY()" value="Trở về" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Thêm Gợi ý-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var rvtoken = $("input[name='__RequestVerificationToken']").val();
+    var moduleId = @Dnn.ModuleContext.ModuleId;
+    var tabId = @Dnn.ModuleContext.TabId;
+</script>
+
+<div class="sytClearFix dnnClear"></div>
+
+<script src="~/DesktopModules/MVC/SoYTe.GUI/DanhMucModule/Scripts/DanhMuc/thutuc.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/DanhMucModule/Scripts/DanhMuc/linhvuc.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/DanhMucModule/Scripts/DanhMuc/quytrinhthutuc.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/DanhMucModule/Scripts/DanhMuc/common.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/DanhMucModule/Scripts/DanhMuc/lydo.js"></script>
+<script src="~/DesktopModules/MVC/SoYTe.GUI/DanhMucModule/Scripts/DanhMuc/goiy.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#right_linhvuc").show();
+        $("#right_thutuc").hide();
+        $("#right_quytrinhthutuc").hide();
+        $("#right_tinhthanh").hide();
+        $("#right_huyenthi").hide();
+        $("#right_phuongxa").hide();
+        $("#right_noicapphep").hide();
+        $("#right_trinhdochuyenmon").hide();
+        $("#right_vitrichuyenmon").hide();
+        $("#right_phamvihanhngheduoc").hide();
+        $("#right_phamvihoatdongKCB").hide();
+        $("#right_phamvikinhdoanhthuoc").hide();
+        $("#right_dangsanphammypham").hide();
+        $("#right_hinhthuctochuc").hide();
+        $("#right_dieukienhanhnghe").hide();
+        $("#right_loaibaocao").hide();
+        $("#right_lydo").hide();
+        $("#right_gopy").hide();
+
+        $("#right_themlinhvuc").hide();
+        $("#right_themquytrinh").hide();
+        $("#right_themthutuc").hide();
+        $("#right_themlydo").hide();
+        $("#right_themgoiy").hide();
+    });
+</script>
+
